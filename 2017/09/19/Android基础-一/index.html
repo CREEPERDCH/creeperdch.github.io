@@ -69,17 +69,17 @@
 
 
 
-<meta name="description" content="苟利国家生死以">
-<meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="http://yoursite.com/about/index.html">
+<meta name="description" content="Service的启动方式?如何保证Service不被杀死?​    两种启动方式，分别是 startService 与 bindService 启动时的生命周期:​    启动时，startService -&amp;gt; onCreate() -&amp;gt; onStart()​    停止时，stopService -&amp;gt; onDestroy()  ​    在服务启动时，多次调用context.s">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android基础(一)">
+<meta property="og:url" content="http://yoursite.com/2017/09/19/Android基础-一/index.html">
 <meta property="og:site_name" content="CREEPERDCH&#39;s Tech">
-<meta property="og:description" content="苟利国家生死以">
+<meta property="og:description" content="Service的启动方式?如何保证Service不被杀死?​    两种启动方式，分别是 startService 与 bindService 启动时的生命周期:​    启动时，startService -&amp;gt; onCreate() -&amp;gt; onStart()​    停止时，stopService -&amp;gt; onDestroy()  ​    在服务启动时，多次调用context.s">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-19T08:12:16.527Z">
+<meta property="og:updated_time" content="2017-09-19T09:37:57.351Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about">
-<meta name="twitter:description" content="苟利国家生死以">
+<meta name="twitter:title" content="Android基础(一)">
+<meta name="twitter:description" content="Service的启动方式?如何保证Service不被杀死?​    两种启动方式，分别是 startService 与 bindService 启动时的生命周期:​    启动时，startService -&amp;gt; onCreate() -&amp;gt; onStart()​    停止时，stopService -&amp;gt; onDestroy()  ​    在服务启动时，多次调用context.s">
 
 
 
@@ -109,13 +109,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/about/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/09/19/Android基础-一/"/>
 
 
 
 
 
-  <title>about | CREEPERDCH's Tech</title>
+  <title>Android基础(一) | CREEPERDCH's Tech</title>
   
 
 
@@ -250,33 +250,189 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/19/Android基础-一/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CREEPERDCH">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/2b_round.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CREEPERDCH's Tech">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">about</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
+          <h1 class="post-title" itemprop="name headline">Android基础(一)</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-19T17:29:33+08:00">
+                2017-09-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-      </div>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/android/" itemprop="url" rel="index">
+                    <span itemprop="name">android</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/09/19/Android基础-一/" class="leancloud_visitors" data-flag-title="Android基础(一)">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h3 id="Service的启动方式-如何保证Service不被杀死"><a href="#Service的启动方式-如何保证Service不被杀死" class="headerlink" title="Service的启动方式?如何保证Service不被杀死?"></a>Service的启动方式?如何保证Service不被杀死?</h3><p>​    两种启动方式，分别是 startService 与 bindService</p>
+<h5 id="启动时的生命周期"><a href="#启动时的生命周期" class="headerlink" title="启动时的生命周期:"></a>启动时的生命周期:</h5><p>​    启动时，startService -&gt; onCreate() -&gt; onStart()<br>​    停止时，stopService -&gt; onDestroy() </p>
+<p>​    在服务启动时，多次调用context.startService只会调用onStart()方法，并不会多次创建服务。</p>
+<h5 id="绑定时的生命周期："><a href="#绑定时的生命周期：" class="headerlink" title="绑定时的生命周期："></a>绑定时的生命周期：</h5><p>​    绑定时,bindService -&gt; onCreate() –&gt; onBind()<br>​    解绑定时, unbindService -&gt;onUnbind() -&gt; onDestory() </p>
+<h5 id="常见的保证Service不被杀死的方法有"><a href="#常见的保证Service不被杀死的方法有" class="headerlink" title="常见的保证Service不被杀死的方法有:"></a>常见的保证Service不被杀死的方法有:</h5><p>​    重写onStartCommond方法,返回值为true;</p>
+<p>​    在onDestory中发送广播重启service;</p>
+<p>​    提升service优先级(android:priority = “1000”);</p>
+<p>​    提升service进程优先级，使用startForeground 将service放到前台状态;</p>
+<p>​    Application加上Persistent属性(android:persistent=”true” );</p>
+<p>​    将APK安装到/system/app，变身系统级应用;</p>
+<p>​    双进程守护;</p>
+<h3 id="整个View的事件转发流程"><a href="#整个View的事件转发流程" class="headerlink" title="整个View的事件转发流程?"></a>整个View的事件转发流程?</h3><p>​    View.dispatchEvent-&gt;View.setOnTouchListener-&gt;View.onTouchEvent </p>
+<p>​    在dispatchTouchEvent中会进行OnTouchListener的判断，如果OnTouchListener不为null且    返回true，则表示事件被消费，onTouchEvent不会被执行；否则执行onTouchEvent;</p>
+<h3 id="ViewGroup的事件分发"><a href="#ViewGroup的事件分发" class="headerlink" title="ViewGroup的事件分发?"></a>ViewGroup的事件分发?</h3><h5 id="大体的事件流程为："><a href="#大体的事件流程为：" class="headerlink" title="大体的事件流程为："></a>大体的事件流程为：</h5><p>​        ViewGroup的dispatchTouchEvent</p>
+<p>​             -&gt; ViewGroup的onInterceptTouchEvent</p>
+<p>​             -&gt; 子View的dispatchTouchEvent</p>
+<p>​             -&gt;子View的onTouchEvent </p>
+<h3 id="View是如何刷新的"><a href="#View是如何刷新的" class="headerlink" title="View是如何刷新的?"></a>View是如何刷新的?</h3><p>​    在主线程中调用invalidate(),在非主线程中调用postInvalidate();</p>
+<h3 id="子线程更新UI的方式有哪几种"><a href="#子线程更新UI的方式有哪几种" class="headerlink" title="子线程更新UI的方式有哪几种?"></a>子线程更新UI的方式有哪几种?</h3><p>​    Handler<br>​    在子线程中通过runOnUiThread()方法更新UI<br>​    View.post(Runnable r)<br>​    异步任务</p>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/09/19/Markdown基础语法/" rel="next" title="Markdown基础语法">
+                <i class="fa fa-chevron-left"></i> Markdown基础语法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -309,8 +465,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <img class="site-author-image" itemprop="image"
@@ -404,6 +569,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Service的启动方式-如何保证Service不被杀死"><span class="nav-number">1.</span> <span class="nav-text">Service的启动方式?如何保证Service不被杀死?</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#启动时的生命周期"><span class="nav-number">1.0.1.</span> <span class="nav-text">启动时的生命周期:</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#绑定时的生命周期："><span class="nav-number">1.0.2.</span> <span class="nav-text">绑定时的生命周期：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#常见的保证Service不被杀死的方法有"><span class="nav-number">1.0.3.</span> <span class="nav-text">常见的保证Service不被杀死的方法有:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#整个View的事件转发流程"><span class="nav-number">2.</span> <span class="nav-text">整个View的事件转发流程?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ViewGroup的事件分发"><span class="nav-number">3.</span> <span class="nav-text">ViewGroup的事件分发?</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#大体的事件流程为："><span class="nav-number">3.0.1.</span> <span class="nav-text">大体的事件流程为：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#View是如何刷新的"><span class="nav-number">4.</span> <span class="nav-text">View是如何刷新的?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#子线程更新UI的方式有哪几种"><span class="nav-number">5.</span> <span class="nav-text">子线程更新UI的方式有哪几种?</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

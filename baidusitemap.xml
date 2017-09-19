@@ -3,12 +3,27 @@
 
 
     
-    
-    
+  <url>
+    <loc>http://yoursite.com/2017/09/19/Android%E5%9F%BA%E7%A1%80-%E4%B8%80/</loc>
+    <lastmod>2017-09-19T09:37:57.351Z</lastmod>
+    <data>
+        <display>
+        <title>Android基础(一)</title>
+        <pubTime>2017-09-19T09:29:33.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="android" url="http://yoursite.com/categories/android/"/>
+          
+        </display>
+    </data>
+    </url>
+
     
   <url>
     <loc>http://yoursite.com/2017/09/19/Markdown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</loc>
-    <lastmod>2017-09-19T07:32:19.232Z</lastmod>
+    <lastmod>2017-09-19T09:26:50.277Z</lastmod>
     <data>
         <display>
         <title>Markdown基础语法</title>
@@ -23,6 +38,9 @@
     </data>
     </url>
 
+    
+    
+    
     
   <url>
     <loc>http://yoursite.com/2017/09/19/hello-world/</loc>
