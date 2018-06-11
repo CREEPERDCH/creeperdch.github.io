@@ -26,7 +26,7 @@ type: "about"
 
 Github: [CREEPERDCH](https://github.com/CREEPERDCH)
 
-Email:   wwwwyn4240@gmail.com
+Email: [wwwwyn4240@gmail.com](wwwwyn4240@gmail.com)
 
 Weibo: [渡鸦0424](http://www.weibo.com/u/3015389937)
 
