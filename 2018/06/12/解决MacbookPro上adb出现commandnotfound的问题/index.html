@@ -155,10 +155,7 @@
 <li><p>输入 vim ~/.bash_profile 若文件存在，将会打开 .bash_profile文件，没有即新建次文件。</p>
 <p> <img src="https://ws3.sinaimg.cn/large/006tNc79gy1ftbhxx4w3jj31kw16awfr.jpg" alt=""></p>
 <p> 在vi界面下，按照图示输入以下内容：</p>
-<pre><code class="shell"> export ANDROID_HOME=/Users/creeper/library/android/sdk
- export PATH=${PATH}:${ANDROID_HOME}/tools
- export PATH=${PATH}:${ANDROID_HOME}/platform-tools
-</code></pre>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export ANDROID_HOME=/Users/creeper/library/android/sdk</span><br><span class="line">export PATH=$&#123;PATH&#125;:$&#123;ANDROID_HOME&#125;/tools</span><br><span class="line">export PATH=$&#123;PATH&#125;:$&#123;ANDROID_HOME&#125;/platform-tools</span><br></pre></td></tr></table></figure>
 <p> <strong>注意</strong>，这里的ANDROID_HOME是你个人的Android_SDK的路径，你可以在Android Studio里找到具体的路径</p>
 </li>
 <li><p>退出编辑模式并保存修改内容后，输入 source ~/.bash_profile 来使改动生效</p>
