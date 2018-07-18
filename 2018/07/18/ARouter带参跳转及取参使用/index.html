@@ -65,25 +65,24 @@
 	
 </head>
     
-		<body class="is-loading">
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_solarized.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
     <!-- Wrapper 外包 s-->
-    <div id="wrapper" class="fade-in overlay">
+    <div id="wrapper" class="fade-in">
         <!-- Intro 头部显示 s -->
-                <div id="intro">
-            <h1>This is<br />
-                        CREEPERDCH </h1>
-            <p> I hope that someone who has not forgotten his heart will spend the day and night with you.
-            </p>
-            <ul class="actions">
-                <li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
-            </ul>
-        </div>
         <!-- Intro 头部显示 e -->
         <!-- Header 头部logo start -->
         <header id="header">
     <a href="/" class="logo">Patient</a>
 </header>
-        <!-- Header 头部logo end -->
         <!-- Nav 导航条 start -->
         <nav id="nav" class="special" >
             <ul class="menu links" >
@@ -156,55 +155,104 @@
                     
 			</ul>
 </nav>
-        <!-- Nav 导航条 end -->
-        <!-- Main 主要部分 start -->
-        
-        <!-- 文章列表   s -->
-        <div id="main" style="background-color: transparent; padding:0;">
-        <section class="link_container" style="margin-top: 0; background-color: transparent; ">
-            <div class="link_row">
-                <!-- 文章sample  s-->
 
-                
-                <div class="6u 12u(narrower)">
-                    <section class="link_box special">
-                       <a href="/2017/09/21/最后的问题/">
-                        <div class="page_title" style="background-image: url(https://ws1.sinaimg.cn/large/006tKfTcgy1ft8gaqu00uj31jk0zzwmg.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;">
-                            <!--标题-->
-                            <h2 class="page_title_text"> 最后的问题 </h2>
-                            <!--段落-->
-                        </div>
-                        </a>
-                        <div class="home-post-info">
-                            <!-- Author Avatar -->
-                            <div class="home-post-info-author-avatar">
-                                <h6><span class="home-post-info-data">2017-09-21</span></h6>
-                                <div class="home-post-info-Category">
-                                    <!-- Category -->
-                                    <span>
-                            <h6>
-                            <a class="post_category-link" href="http://localhost:4000/categories/Algorithm/">
-                                <a class="post_category-link" href="/categories/novel/">novel</a></a>
-                            </h6>
-                        </span>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-                <!-- 文章sample  e-->
-            
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://ws1.sinaimg.cn/large/006tNc79gy1ftdsi6iuqoj31kw16db29.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >ARouter带参跳转及取参使用</h2></a>
             </div>
-        </section>
-        </div>
-        <!-- 文章列表   end -->
-        <!-- Main 主要部分 end -->
-        <!-- footer  页码 start-->
-        <footer style="text-align: center; padding-top: 2em;">
-  
-</footer>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h1 id="ARouter"><a href="#ARouter" class="headerlink" title="ARouter"></a>ARouter</h1><blockquote>
+<p>A framework for assisting in the renovation of Android app componentization.</p>
+</blockquote>
+<p>项目地址: <a href="https://github.com/alibaba/ARouter" target="_blank" rel="noopener">https://github.com/alibaba/ARouter</a></p>
+<h3 id="带参跳转"><a href="#带参跳转" class="headerlink" title="带参跳转"></a><strong>带参跳转</strong></h3><p><img src="https://ws2.sinaimg.cn/large/006tNc79gy1ftdskvj9gaj311o100jte.jpg" alt=""></p>
+<pre><code class="java">        //头像（登录）--&gt; 跳转我的资料
+        findView&lt;CircleImageView&gt;(civ_login_headPic)!!.setOnClickListener {
+            arouter.build(ARouterConfig.ACTIVITY_URL_SETTINGS)
+                    .withString(CommonConfig.USERINFO_TAG, &quot;userInfo&quot;)
+                    .navigation()
+        }
+</code></pre>
+<h3 id="注解取参"><a href="#注解取参" class="headerlink" title="注解取参"></a><strong>注解取参</strong></h3><p><img src="https://ws2.sinaimg.cn/large/006tNc79gy1ftdsnvdv9yj31740yeabp.jpg" alt=""></p>
+<pre><code class="java">    @JvmField
+    @Autowired(name = CommonConfig.USERINFO_TAG)
+    var userTag: String? = null
 
-        <!-- footer  页码 end-->
+    override fun getContentViewResId(): Int {
+        return R.layout.activity_settings
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        ARouter.getInstance().inject(this)
+    }
+
+    override fun initView() {
+        changeStatusBarForBlack()
+        when (userTag) {
+            null -&gt; initTitleBar(R.string.setting)//从设置进来
+            else -&gt; {
+                //从头像进来,隐藏APP_INFO设置项
+                initTitleBar(R.string.userinfo)
+                include_app_info.visibility = View.GONE
+            }
+        }
+        when (isLogin) {
+            false -&gt; {
+                include_user_info.visibility = View.GONE
+                tv_log_out.visibility = View.GONE
+            }
+            true -&gt; {
+                //头像的加载
+                if (!TextUtils.isEmpty(headPortrait)) {
+                    ImageUtil.loadCircleImageWithLoading(this,
+                            ImageUtil.getPath(this, headPortrait),
+                            civ_setting_head_portrait,
+                            R.drawable.ic_no_person_image,
+                            R.drawable.ic_no_person_image)
+                } else {
+                   civ_setting_head_portrait
+                       .setImageResource(R.drawable.ic_no_person_image)
+                }
+                include_user_info.visibility = View.VISIBLE
+                tv_log_out.visibility = View.VISIBLE
+            }
+        }
+    }
+</code></pre>
+<p><strong>在Kotlin中使用ARouter路由,使用注解取参数时,要注意声明的字段不能使用 <em>Private</em> ,否则会导致GradlePlugin 的异常,因此这里需要加多一个 <em>@JvmField</em> 的注解.</strong></p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 valine -->
+<div id="comment">
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#comment' ,
+        notify: false,
+        verify: false,
+        app_id: 'H78Pg6j0lgmXRgYJayNMsIe3-gzGzoHsz',
+        app_key: 'YwHuAUtNNefaFp7HySR7VvuW',
+        placeholder: 'ヾﾉ≧∀≦)o来快活啊!',
+        pageSize: '10',
+        avatar: '',
+        avatar_cdn: 'https://gravatar.loli.net/avatar/'
+    });
+</script>
+</div>
+<style>
+   #comment{
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
         <!-- Copyright 版权 start -->
                 <div id="copyright">
             <ul>
@@ -215,11 +263,10 @@
             	<span id="busuanzi_container_site_pv">2018总访问量<span id="busuanzi_value_site_pv"></span>次</span>
 			
         </div>
-        <!-- Copyright 版权 end -->
     </div>
-    <!-- Wrapper 外包 e-->
-    <!-- Scripts -->
 </body>
+
+
 
  	
 </html>
