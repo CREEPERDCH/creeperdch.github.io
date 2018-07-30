@@ -63,7 +63,8 @@
     <script src="/js/util.js"></script>
     <script src="/js/main.js"></script>
 	
-</head>
+<link rel="stylesheet" href="/css/prism-hopscotch.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
     
 		
 <!-- Layouts -->
@@ -71,7 +72,7 @@
 
 
 <!--  代码渲染  -->
-<link rel="stylesheet" href="/css/prism_solarized.css" />
+<link rel="stylesheet" href="/css/prism_hopscotch.css" />
 <link rel="stylesheet" href="/css/typo.css" />
 <!-- 文章页 -->
 <body class="is-loading">
@@ -167,60 +168,60 @@
 </blockquote>
 <p>项目地址: <a href="https://github.com/alibaba/ARouter" target="_blank" rel="noopener">https://github.com/alibaba/ARouter</a></p>
 <h3 id="带参跳转"><a href="#带参跳转" class="headerlink" title="带参跳转"></a><strong>带参跳转</strong></h3><p><img src="https://ws2.sinaimg.cn/large/006tNc79gy1ftdskvj9gaj311o100jte.jpg" alt=""></p>
-<pre><code class="java">        //头像（登录）--&gt; 跳转我的资料
-        findView&lt;CircleImageView&gt;(civ_login_headPic)!!.setOnClickListener {
-            arouter.build(ARouterConfig.ACTIVITY_URL_SETTINGS)
-                    .withString(CommonConfig.USERINFO_TAG, &quot;userInfo&quot;)
-                    .navigation()
-        }
-</code></pre>
+<pre class="line-numbers language-java"><code class="language-java">        <span class="token comment" spellcheck="true">//头像（登录）--> 跳转我的资料</span>
+        findView<span class="token operator">&lt;</span>CircleImageView<span class="token operator">></span><span class="token punctuation">(</span>civ_login_headPic<span class="token punctuation">)</span><span class="token operator">!</span><span class="token operator">!</span><span class="token punctuation">.</span>setOnClickListener <span class="token punctuation">{</span>
+            arouter<span class="token punctuation">.</span><span class="token function">build</span><span class="token punctuation">(</span>ARouterConfig<span class="token punctuation">.</span>ACTIVITY_URL_SETTINGS<span class="token punctuation">)</span>
+                    <span class="token punctuation">.</span><span class="token function">withString</span><span class="token punctuation">(</span>CommonConfig<span class="token punctuation">.</span>USERINFO_TAG<span class="token punctuation">,</span> <span class="token string">"userInfo"</span><span class="token punctuation">)</span>
+                    <span class="token punctuation">.</span><span class="token function">navigation</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="注解取参"><a href="#注解取参" class="headerlink" title="注解取参"></a><strong>注解取参</strong></h3><p><img src="https://ws2.sinaimg.cn/large/006tNc79gy1ftdsnvdv9yj31740yeabp.jpg" alt=""></p>
-<pre><code class="java">    @JvmField
-    @Autowired(name = CommonConfig.USERINFO_TAG)
-    var userTag: String? = null
+<pre class="line-numbers language-java"><code class="language-java">    <span class="token annotation punctuation">@JvmField</span>
+    <span class="token annotation punctuation">@Autowired</span><span class="token punctuation">(</span>name <span class="token operator">=</span> CommonConfig<span class="token punctuation">.</span>USERINFO_TAG<span class="token punctuation">)</span>
+    var userTag<span class="token operator">:</span> String<span class="token operator">?</span> <span class="token operator">=</span> null
 
-    override fun getContentViewResId(): Int {
-        return R.layout.activity_settings
-    }
+    override fun <span class="token function">getContentViewResId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> Int <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> R<span class="token punctuation">.</span>layout<span class="token punctuation">.</span>activity_settings
+    <span class="token punctuation">}</span>
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        ARouter.getInstance().inject(this)
-    }
+    override fun <span class="token function">onCreate</span><span class="token punctuation">(</span>savedInstanceState<span class="token operator">:</span> Bundle<span class="token operator">?</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">onCreate</span><span class="token punctuation">(</span>savedInstanceState<span class="token punctuation">)</span>
+        ARouter<span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">inject</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
 
-    override fun initView() {
-        changeStatusBarForBlack()
-        when (userTag) {
-            null -&gt; initTitleBar(R.string.setting)//从设置进来
-            else -&gt; {
-                //从头像进来,隐藏APP_INFO设置项
-                initTitleBar(R.string.userinfo)
-                include_app_info.visibility = View.GONE
-            }
-        }
-        when (isLogin) {
-            false -&gt; {
-                include_user_info.visibility = View.GONE
-                tv_log_out.visibility = View.GONE
-            }
-            true -&gt; {
-                //头像的加载
-                if (!TextUtils.isEmpty(headPortrait)) {
-                    ImageUtil.loadCircleImageWithLoading(this,
-                            ImageUtil.getPath(this, headPortrait),
-                            civ_setting_head_portrait,
-                            R.drawable.ic_no_person_image,
-                            R.drawable.ic_no_person_image)
-                } else {
+    override fun <span class="token function">initView</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">changeStatusBarForBlack</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token function">when</span> <span class="token punctuation">(</span>userTag<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            null <span class="token operator">-</span><span class="token operator">></span> <span class="token function">initTitleBar</span><span class="token punctuation">(</span>R<span class="token punctuation">.</span>string<span class="token punctuation">.</span>setting<span class="token punctuation">)</span><span class="token comment" spellcheck="true">//从设置进来</span>
+            <span class="token keyword">else</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token punctuation">{</span>
+                <span class="token comment" spellcheck="true">//从头像进来,隐藏APP_INFO设置项</span>
+                <span class="token function">initTitleBar</span><span class="token punctuation">(</span>R<span class="token punctuation">.</span>string<span class="token punctuation">.</span>userinfo<span class="token punctuation">)</span>
+                include_app_info<span class="token punctuation">.</span>visibility <span class="token operator">=</span> View<span class="token punctuation">.</span>GONE
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token function">when</span> <span class="token punctuation">(</span>isLogin<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token boolean">false</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token punctuation">{</span>
+                include_user_info<span class="token punctuation">.</span>visibility <span class="token operator">=</span> View<span class="token punctuation">.</span>GONE
+                tv_log_out<span class="token punctuation">.</span>visibility <span class="token operator">=</span> View<span class="token punctuation">.</span>GONE
+            <span class="token punctuation">}</span>
+            <span class="token boolean">true</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token punctuation">{</span>
+                <span class="token comment" spellcheck="true">//头像的加载</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>TextUtils<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span>headPortrait<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    ImageUtil<span class="token punctuation">.</span><span class="token function">loadCircleImageWithLoading</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span>
+                            ImageUtil<span class="token punctuation">.</span><span class="token function">getPath</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> headPortrait<span class="token punctuation">)</span><span class="token punctuation">,</span>
+                            civ_setting_head_portrait<span class="token punctuation">,</span>
+                            R<span class="token punctuation">.</span>drawable<span class="token punctuation">.</span>ic_no_person_image<span class="token punctuation">,</span>
+                            R<span class="token punctuation">.</span>drawable<span class="token punctuation">.</span>ic_no_person_image<span class="token punctuation">)</span>
+                <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
                    civ_setting_head_portrait
-                       .setImageResource(R.drawable.ic_no_person_image)
-                }
-                include_user_info.visibility = View.VISIBLE
-                tv_log_out.visibility = View.VISIBLE
-            }
-        }
-    }
-</code></pre>
+                       <span class="token punctuation">.</span><span class="token function">setImageResource</span><span class="token punctuation">(</span>R<span class="token punctuation">.</span>drawable<span class="token punctuation">.</span>ic_no_person_image<span class="token punctuation">)</span>
+                <span class="token punctuation">}</span>
+                include_user_info<span class="token punctuation">.</span>visibility <span class="token operator">=</span> View<span class="token punctuation">.</span>VISIBLE
+                tv_log_out<span class="token punctuation">.</span>visibility <span class="token operator">=</span> View<span class="token punctuation">.</span>VISIBLE
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><strong>在Kotlin中使用ARouter路由,使用注解取参数时,要注意声明的字段不能使用 <em>Private</em> ,否则会导致GradlePlugin 的异常,因此这里需要加多一个 <em>@JvmField</em> 的注解.</strong></p>
 
             </div>

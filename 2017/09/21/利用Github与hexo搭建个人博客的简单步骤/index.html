@@ -63,7 +63,8 @@
     <script src="/js/util.js"></script>
     <script src="/js/main.js"></script>
 	
-</head>
+<link rel="stylesheet" href="/css/prism-hopscotch.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
     
 		
 <!-- Layouts -->
@@ -71,7 +72,7 @@
 
 
 <!--  代码渲染  -->
-<link rel="stylesheet" href="/css/prism_solarized.css" />
+<link rel="stylesheet" href="/css/prism_hopscotch.css" />
 <link rel="stylesheet" href="/css/typo.css" />
 <!-- 文章页 -->
 <body class="is-loading">
@@ -181,38 +182,38 @@
 <p><img src="https://ws2.sinaimg.cn/large/006tNc79gy1ftbhzzctr4j30o408z0ss.jpg" alt=""></p>
 <p>​    安装好Node.js之后就可以使用npm命令了,首先我们可以验证一下上述环境是否准备完毕</p>
 <p>​    按下”win+X”组合键,选择”命令提示符(管理员)”,分别输入以下两条命令</p>
-<pre><code class="cmd">git --version
-</code></pre>
-<pre><code class="cmd">node -v
-</code></pre>
+<pre class="line-numbers language-cmd"><code class="language-cmd">git --version
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-cmd"><code class="language-cmd">node -v
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p><img src="https://ws1.sinaimg.cn/large/006tNc79gy1ftbi07frggj30nr0c8mwz.jpg" alt=""></p>
 <p>​    如果出现上述结果,则表面环境已经正确搭建.</p>
 <h2 id="安装和配置hexo"><a href="#安装和配置hexo" class="headerlink" title="安装和配置hexo"></a>安装和配置hexo</h2><p>​    以下命令都是在终端里直接运行的:</p>
 <p>​    使用npm安装hexo</p>
-<pre><code class="cmd">npm install -g hexo-cli
-</code></pre>
+<pre class="line-numbers language-cmd"><code class="language-cmd">npm install -g hexo-cli
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>​    然后在你本地创建一个文件夹,起名为Hexo</p>
 <p>​    然后cd到Hexo文件夹里,输入以下命令:</p>
-<pre><code class="cmd">hexo init
+<pre class="line-numbers language-cmd"><code class="language-cmd">hexo init
 hexo generate
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>​    这边用了一位<a href="http://www.jianshu.com/p/863f3f2d1733" target="_blank" rel="noopener">博主</a>的截图</p>
 <p><img src="https://ws3.sinaimg.cn/large/006tNc79gy1ftbi15qicmj318k06iabs.jpg" alt=""></p>
 <p>​    完成后Hexo文件夹内部的结构应该是这样的:</p>
 <p><img src="https://ws4.sinaimg.cn/large/006tNc79gy1ftbi1fzj0hj30i408v747.jpg" alt=""></p>
 <p>​    到这一步你已经可以在本地预览你的网站了,输入下面的命令开启本地服务:</p>
-<pre><code class="cmd">hexo server
-</code></pre>
-<h3 id="常见的hexo配置错误及解决办法"><a href="#常见的hexo配置错误及解决办法" class="headerlink" title="常见的hexo配置错误及解决办法:"></a>常见的hexo配置错误及解决办法:</h3><pre><code class="cmd">ERROR Plugin load failed: hexo-server
+<pre class="line-numbers language-cmd"><code class="language-cmd">hexo server
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="常见的hexo配置错误及解决办法"><a href="#常见的hexo配置错误及解决办法" class="headerlink" title="常见的hexo配置错误及解决办法:"></a>常见的hexo配置错误及解决办法:</h3><pre class="line-numbers language-cmd"><code class="language-cmd">ERROR Plugin load failed: hexo-server
 原因： Besides, utilities are separated into a standalone module. hexo.util is not reachable anymore.
 解决方法，执行命令: npm install hexo-server
-</code></pre>
-<pre><code class="cmd">执行命令hexo server，提示：Usage: hexo&lt;Command&gt; ....
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-cmd"><code class="language-cmd">执行命令hexo server，提示：Usage: hexo<Command> ....
 原因：我认为是没有生成本地服务
 解决方法，执行命令：$ npm install hexo-server --save
 提示：hexo-server@0.1.2 node_modules/hexo-server
 ....
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="启用主题NexT"><a href="#启用主题NexT" class="headerlink" title="启用主题NexT"></a>启用主题NexT</h2><p>​    这里附上<a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">NexT主题的使用说明文档</a></p>
 <h2 id="将博客部署到你的GitHub-pages-上"><a href="#将博客部署到你的GitHub-pages-上" class="headerlink" title="将博客部署到你的GitHub pages 上"></a>将博客部署到你的GitHub pages 上</h2><p>​    首先我们需要进到Hexo文件夹根目录下的配置文件 <strong>_config.yml</strong> 文件里:</p>
 <p><img src="https://ws2.sinaimg.cn/large/006tNc79gy1ftbi1u9hlcj30vn0gkt8x.jpg" alt=""></p>
@@ -220,27 +221,27 @@ hexo generate
 <p><img src="https://ws4.sinaimg.cn/large/006tNc79gy1ftbi21pidoj30k204gt8k.jpg" alt=""></p>
 <p>​    注意冒号后边需要加一个空格.</p>
 <p>​    然后在根目录下执行如下命令(这里可以使用git bash):</p>
-<pre><code class="git">$ npm install hexo-deployer-git --save
-</code></pre>
+<pre class="line-numbers language-git"><code class="language-git">$ npm install hexo-deployer-git --save
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>​    等结束以后执行以下命令,部署你的博客:</p>
-<pre><code class="git">$ hexo deploy
-</code></pre>
+<pre class="line-numbers language-git"><code class="language-git">$ hexo deploy
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>​    注意,若你配置了SSH的话,这一步会弹出窗口要求你输入ssh密钥</p>
 <p>​    如果一切顺利,此时你访问 <strong>yourname.github.io</strong> 就可以看到你的博客了.</p>
 <h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令:"></a>常用命令:</h2><p>​    每次部署的步骤，可按以下三步来进行</p>
-<pre><code class="git">$ hexo clean
+<pre class="line-numbers language-git"><code class="language-git">$ hexo clean
 $ hexo generate
 $ hexo deploy
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>​    一些常用命令:</p>
-<pre><code class="git">$ hexo new &quot;postName&quot; #新建文章
-$ hexo new page &quot;pageName&quot; #新建页面
+<pre class="line-numbers language-git"><code class="language-git">$ hexo new <span class="token string">"postName"</span> #新建文章
+$ hexo new page <span class="token string">"pageName"</span> #新建页面
 $ hexo generate #生成静态页面至public目录
-$ hexo server #开启预览访问端口（默认端口4000，&#39;ctrl + c&#39;关闭server）
+$ hexo server #开启预览访问端口（默认端口4000，<span class="token string">'ctrl + c'</span>关闭server）
 $ hexo deploy #将.deploy目录部署到GitHub
 $ hexo help  #查看帮助
 $ hexo version  #查看Hexo的版本
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="友情链接"><a href="#友情链接" class="headerlink" title="友情链接:"></a>友情链接:</h3><ul>
 <li><p><a href="http://leopardpan.github.io" target="_blank" rel="noopener">潘柏信的博客</a></p>
 <p>​</p>

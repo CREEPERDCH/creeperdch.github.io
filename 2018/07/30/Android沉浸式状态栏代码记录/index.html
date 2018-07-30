@@ -63,7 +63,8 @@
     <script src="/js/util.js"></script>
     <script src="/js/main.js"></script>
 	
-</head>
+<link rel="stylesheet" href="/css/prism-hopscotch.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
     
 		
 <!-- Layouts -->
@@ -71,7 +72,7 @@
 
 
 <!--  代码渲染  -->
-<link rel="stylesheet" href="/css/prism_solarized.css" />
+<link rel="stylesheet" href="/css/prism_hopscotch.css" />
 <link rel="stylesheet" href="/css/typo.css" />
 <!-- 文章页 -->
 <body class="is-loading">
@@ -164,31 +165,31 @@
             <div class="typo" style="padding: 3rem;">
                 <p><strong>原文</strong></p>
 <p><a href="https://blog.csdn.net/guolin_blog/article/details/51763825" target="_blank" rel="noopener">郭霖的专栏</a></p>
-<pre><code class="java">public class MainActivity extends AppCompatActivity {
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MainActivity</span> <span class="token keyword">extends</span> <span class="token class-name">AppCompatActivity</span> <span class="token punctuation">{</span>
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-    }
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">onCreate</span><span class="token punctuation">(</span>Bundle savedInstanceState<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">onCreate</span><span class="token punctuation">(</span>savedInstanceState<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">setContentView</span><span class="token punctuation">(</span>R<span class="token punctuation">.</span>layout<span class="token punctuation">.</span>activity_main<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
-    @Override
-    public void onWindowFocusChanged(boolean hasFocus) {
-        super.onWindowFocusChanged(hasFocus);
-        if (hasFocus &amp;&amp; Build.VERSION.SDK_INT &gt;= 19) {
-            View decorView = getWindow().getDecorView();
-            decorView.setSystemUiVisibility(
-                View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                | View.SYSTEM_UI_FLAG_FULLSCREEN
-                | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
-        }
-    }
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onWindowFocusChanged</span><span class="token punctuation">(</span><span class="token keyword">boolean</span> hasFocus<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">onWindowFocusChanged</span><span class="token punctuation">(</span>hasFocus<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>hasFocus <span class="token operator">&amp;&amp;</span> Build<span class="token punctuation">.</span>VERSION<span class="token punctuation">.</span>SDK_INT <span class="token operator">>=</span> <span class="token number">19</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            View decorView <span class="token operator">=</span> <span class="token function">getWindow</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getDecorView</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            decorView<span class="token punctuation">.</span><span class="token function">setSystemUiVisibility</span><span class="token punctuation">(</span>
+                View<span class="token punctuation">.</span>SYSTEM_UI_FLAG_LAYOUT_STABLE
+                <span class="token operator">|</span> View<span class="token punctuation">.</span>SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                <span class="token operator">|</span> View<span class="token punctuation">.</span>SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                <span class="token operator">|</span> View<span class="token punctuation">.</span>SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                <span class="token operator">|</span> View<span class="token punctuation">.</span>SYSTEM_UI_FLAG_FULLSCREEN
+                <span class="token operator">|</span> View<span class="token punctuation">.</span>SYSTEM_UI_FLAG_IMMERSIVE_STICKY<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
 
-}
-</code></pre>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
             </div>
 
