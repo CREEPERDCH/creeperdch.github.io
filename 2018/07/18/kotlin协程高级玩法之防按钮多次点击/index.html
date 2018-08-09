@@ -112,20 +112,20 @@
 
 
 
-  <meta name="description" content="原文Kotlin协程高级玩法之防按钮多次点击 作者zzyandroid 引言在android开发过程中，经常遇到按钮多次点击后，会多次触发业务流程，导致不必要的浪费，一般在处理过程中会添加一个boolean状态来控制，实现起来过于繁琐，而在kotlin的世界里，这就简单了。 实现 给View扩展一个函数叫onClickStart，意思是只处理第一次开始事件  细节: 初始化一个协程实例actor，">
+  <meta name="description" content="原文Kotlin协程高级玩法之防按钮多次点击 作者zzyandroid 引言在android开发过程中，经常遇到按钮多次点击后，会多次触发业务流程，导致不必要的浪费，一般在处理过程中会添加一个boolean状态来控制，实现起来过于繁琐，而在kotlin的世界里，这就简单了。 实现 给View扩展一个函数叫onClickStart，意思是只处理第一次开始事件  细节: 初始化一个协程实例actor">
 <meta name="keywords" content="Kotlin">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Kotlin协程高级玩法之防按钮多次点击">
 <meta property="og:url" content="http://creeperdch.xyz/2018/07/18/kotlin协程高级玩法之防按钮多次点击/index.html">
 <meta property="og:site_name" content="CREEPERDCH">
-<meta property="og:description" content="原文Kotlin协程高级玩法之防按钮多次点击 作者zzyandroid 引言在android开发过程中，经常遇到按钮多次点击后，会多次触发业务流程，导致不必要的浪费，一般在处理过程中会添加一个boolean状态来控制，实现起来过于繁琐，而在kotlin的世界里，这就简单了。 实现 给View扩展一个函数叫onClickStart，意思是只处理第一次开始事件  细节: 初始化一个协程实例actor，">
+<meta property="og:description" content="原文Kotlin协程高级玩法之防按钮多次点击 作者zzyandroid 引言在android开发过程中，经常遇到按钮多次点击后，会多次触发业务流程，导致不必要的浪费，一般在处理过程中会添加一个boolean状态来控制，实现起来过于繁琐，而在kotlin的世界里，这就简单了。 实现 给View扩展一个函数叫onClickStart，意思是只处理第一次开始事件  细节: 初始化一个协程实例actor">
 <meta property="og:locale" content="ja">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79gy1fte5rlxaudj30om07rmxg.jpg">
 <meta property="og:image" content="https://ws2.sinaimg.cn/large/006tNc79gy1fte5t0p9qaj30kz087t95.jpg">
-<meta property="og:updated_time" content="2018-07-18T09:51:22.965Z">
+<meta property="og:updated_time" content="2018-08-09T05:01:15.304Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Kotlin协程高级玩法之防按钮多次点击">
-<meta name="twitter:description" content="原文Kotlin协程高级玩法之防按钮多次点击 作者zzyandroid 引言在android开发过程中，经常遇到按钮多次点击后，会多次触发业务流程，导致不必要的浪费，一般在处理过程中会添加一个boolean状态来控制，实现起来过于繁琐，而在kotlin的世界里，这就简单了。 实现 给View扩展一个函数叫onClickStart，意思是只处理第一次开始事件  细节: 初始化一个协程实例actor，">
+<meta name="twitter:description" content="原文Kotlin协程高级玩法之防按钮多次点击 作者zzyandroid 引言在android开发过程中，经常遇到按钮多次点击后，会多次触发业务流程，导致不必要的浪费，一般在处理过程中会添加一个boolean状态来控制，实现起来过于繁琐，而在kotlin的世界里，这就简单了。 实现 给View扩展一个函数叫onClickStart，意思是只处理第一次开始事件  细节: 初始化一个协程实例actor">
 <meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006tNc79gy1fte5rlxaudj30om07rmxg.jpg">
 
 
@@ -339,12 +339,24 @@
                 
               
 
-              <time title="作成された時間：2018-07-18 17:44:14 / Updated at：17:51:22" itemprop="dateCreated datePublished" datetime="2018-07-18T17:44:14+08:00">2018-07-18</time>
+              <time title="作成された時間：2018-07-18 17:44:14" itemprop="dateCreated datePublished" datetime="2018-07-18T17:44:14+08:00">2018-07-18</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">に編集されました</span>
+                
+                <time title="Updated at：2018-08-09 13:01:15" itemprop="dateModified" datetime="2018-08-09T13:01:15+08:00">2018-08-09</time>
               
             
           </span>
@@ -413,7 +425,8 @@
       
 
       
-        <h2 id="原文"><a href="#原文" class="headerlink" title="原文"></a>原文</h2><p><a href="http://www.jcodecraeer.com/a/anzhuokaifa/2017/0830/8449.html" target="_blank" rel="noopener">Kotlin协程高级玩法之防按钮多次点击</a></p>
+        <a id="more"></a>
+<h2 id="原文"><a href="#原文" class="headerlink" title="原文"></a>原文</h2><p><a href="http://www.jcodecraeer.com/a/anzhuokaifa/2017/0830/8449.html" target="_blank" rel="noopener">Kotlin协程高级玩法之防按钮多次点击</a></p>
 <h2 id="作者"><a href="#作者" class="headerlink" title="作者"></a>作者</h2><p><a href="http://www.jcodecraeer.com/member/index.php?uid=zzyandroid" target="_blank" rel="noopener">zzyandroid</a></p>
 <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><pre><code>在android开发过程中，经常遇到按钮多次点击后，会多次触发业务流程，导致不必要的浪费，一般在处理过程中会添加一个boolean状态来控制，实现起来过于繁琐，而在kotlin的世界里，这就简单了。
 </code></pre><h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><blockquote>
