@@ -112,18 +112,18 @@
 
 
 
-  <meta name="description" content="原文 郭霖的专栏 public class MainActivity extends AppCompatActivity {      @Override     protected void onCreate(Bundle savedInstanceState) {         super.onCreate(savedInstanceState);         setContentVi">
+  <meta name="description" content="原文 郭霖的专栏 123456789101112131415161718192021222324public class MainActivity extends AppCompatActivity &amp;#123;    @Override    protected void onCreate(Bundle savedInstanceState) &amp;#123;        super.onCre">
 <meta name="keywords" content="Android">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Android沉浸式状态栏代码记录">
 <meta property="og:url" content="http://creeperdch.xyz/2018/07/30/Android沉浸式状态栏代码记录/index.html">
 <meta property="og:site_name" content="CREEPERDCH">
-<meta property="og:description" content="原文 郭霖的专栏 public class MainActivity extends AppCompatActivity {      @Override     protected void onCreate(Bundle savedInstanceState) {         super.onCreate(savedInstanceState);         setContentVi">
+<meta property="og:description" content="原文 郭霖的专栏 123456789101112131415161718192021222324public class MainActivity extends AppCompatActivity &amp;#123;    @Override    protected void onCreate(Bundle savedInstanceState) &amp;#123;        super.onCre">
 <meta property="og:locale" content="ja">
 <meta property="og:updated_time" content="2018-08-09T05:00:40.159Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android沉浸式状态栏代码记录">
-<meta name="twitter:description" content="原文 郭霖的专栏 public class MainActivity extends AppCompatActivity {      @Override     protected void onCreate(Bundle savedInstanceState) {         super.onCreate(savedInstanceState);         setContentVi">
+<meta name="twitter:description" content="原文 郭霖的专栏 123456789101112131415161718192021222324public class MainActivity extends AppCompatActivity &amp;#123;    @Override    protected void onCreate(Bundle savedInstanceState) &amp;#123;        super.onCre">
 
 
 
@@ -233,14 +233,6 @@
         
         
           
-          <li class="menu-item menu-item-about">
-    <a href="/about/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />について</a>
-  </li>
-        
-        
-        
-          
           <li class="menu-item menu-item-categories">
     <a href="/categories/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-th"></i> <br />カテゴリ</a>
@@ -252,6 +244,14 @@
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />アーカイブ</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />について</a>
   </li>
 
       
@@ -435,31 +435,7 @@
         <a id="more"></a>
 <p><strong>原文</strong></p>
 <p><a href="https://blog.csdn.net/guolin_blog/article/details/51763825" target="_blank" rel="noopener">郭霖的专栏</a></p>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MainActivity</span> <span class="token keyword">extends</span> <span class="token class-name">AppCompatActivity</span> <span class="token punctuation">{</span>
-
-    <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">onCreate</span><span class="token punctuation">(</span>Bundle savedInstanceState<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">onCreate</span><span class="token punctuation">(</span>savedInstanceState<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token function">setContentView</span><span class="token punctuation">(</span>R<span class="token punctuation">.</span>layout<span class="token punctuation">.</span>activity_main<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onWindowFocusChanged</span><span class="token punctuation">(</span><span class="token keyword">boolean</span> hasFocus<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">onWindowFocusChanged</span><span class="token punctuation">(</span>hasFocus<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>hasFocus <span class="token operator">&amp;&amp;</span> Build<span class="token punctuation">.</span>VERSION<span class="token punctuation">.</span>SDK_INT <span class="token operator">>=</span> <span class="token number">19</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            View decorView <span class="token operator">=</span> <span class="token function">getWindow</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getDecorView</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            decorView<span class="token punctuation">.</span><span class="token function">setSystemUiVisibility</span><span class="token punctuation">(</span>
-                View<span class="token punctuation">.</span>SYSTEM_UI_FLAG_LAYOUT_STABLE
-                <span class="token operator">|</span> View<span class="token punctuation">.</span>SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                <span class="token operator">|</span> View<span class="token punctuation">.</span>SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                <span class="token operator">|</span> View<span class="token punctuation">.</span>SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                <span class="token operator">|</span> View<span class="token punctuation">.</span>SYSTEM_UI_FLAG_FULLSCREEN
-                <span class="token operator">|</span> View<span class="token punctuation">.</span>SYSTEM_UI_FLAG_IMMERSIVE_STICKY<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-
-<span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">AppCompatActivity</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_main);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onWindowFocusChanged</span><span class="params">(<span class="keyword">boolean</span> hasFocus)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.onWindowFocusChanged(hasFocus);</span><br><span class="line">        <span class="keyword">if</span> (hasFocus &amp;&amp; Build.VERSION.SDK_INT &gt;= <span class="number">19</span>) &#123;</span><br><span class="line">            View decorView = getWindow().getDecorView();</span><br><span class="line">            decorView.setSystemUiVisibility(</span><br><span class="line">                View.SYSTEM_UI_FLAG_LAYOUT_STABLE</span><br><span class="line">                | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION</span><br><span class="line">                | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN</span><br><span class="line">                | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION</span><br><span class="line">                | View.SYSTEM_UI_FLAG_FULLSCREEN</span><br><span class="line">                | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -680,6 +656,40 @@
           
 
           
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://v3.bootcss.com/getting-started/#download/" title="BootstrapCDN加速" target="_blank">BootstrapCDN加速</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://code.jquery.com/" title="jQueryCDN加速" target="_blank">jQueryCDN加速</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.processon.com/" title="ProcessOn在线制图工具" target="_blank">ProcessOn在线制图工具</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.clipconverter.cc/" title="Youtube Downloader" target="_blank">Youtube Downloader</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://learn.lingvist.com/" title="在线外语词汇积累" target="_blank">在线外语词汇积累</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.cloudflare.com/" title="Cloudflare" target="_blank">Cloudflare</a>
+                  </li>
+                
+              </ul>
+            </div>
           
 
           

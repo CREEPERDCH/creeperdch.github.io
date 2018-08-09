@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://creeperdch.xyz/about/index.html</loc>
+    
+    <lastmod>2018-08-09T07:10:04.329Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://creeperdch.xyz/tags/index.html</loc>
     
     <lastmod>2018-08-09T06:41:01.042Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>http://creeperdch.xyz/categories/index.html</loc>
     
     <lastmod>2018-08-09T06:38:32.615Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://creeperdch.xyz/about/index.html</loc>
-    
-    <lastmod>2018-08-09T06:38:10.190Z</lastmod>
     
   </url>
   

@@ -112,17 +112,17 @@
 
 
 
-  <meta name="description" content="1.静态内部类,内部类,匿名内部类分别是什么?为什么内部类会持有外部类的引用?持有的引用是this还是其他?​    静态内部类：使用static修饰的内部类 ​    内部类：就是在某个类的内部又定义了一个类，内部类所嵌入的类称为外部类 ​    匿名内部类：使用new生成的内部类  内部类的产生依赖于外部类，持有的引用是类名.this 2.Java中try catch finally的执行顺">
+  <meta name="description" content="1.静态内部类,内部类,匿名内部类分别是什么?为什么内部类会持有外部类的引用?持有的引用是this还是其他?​    静态内部类：使用static修饰的内部类 ​    内部类：就是在某个类的内部又定义了一个类，内部类所嵌入的类称为外部类 ​    匿名内部类：使用new生成的内部类 内部类的产生依赖于外部类，持有的引用是类名.this 2.Java中try catch finally的执行顺序">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Android基础(二)">
 <meta property="og:url" content="http://creeperdch.xyz/2017/09/19/Android基础-二/index.html">
 <meta property="og:site_name" content="CREEPERDCH">
-<meta property="og:description" content="1.静态内部类,内部类,匿名内部类分别是什么?为什么内部类会持有外部类的引用?持有的引用是this还是其他?​    静态内部类：使用static修饰的内部类 ​    内部类：就是在某个类的内部又定义了一个类，内部类所嵌入的类称为外部类 ​    匿名内部类：使用new生成的内部类  内部类的产生依赖于外部类，持有的引用是类名.this 2.Java中try catch finally的执行顺">
+<meta property="og:description" content="1.静态内部类,内部类,匿名内部类分别是什么?为什么内部类会持有外部类的引用?持有的引用是this还是其他?​    静态内部类：使用static修饰的内部类 ​    内部类：就是在某个类的内部又定义了一个类，内部类所嵌入的类称为外部类 ​    匿名内部类：使用new生成的内部类 内部类的产生依赖于外部类，持有的引用是类名.this 2.Java中try catch finally的执行顺序">
 <meta property="og:locale" content="ja">
 <meta property="og:updated_time" content="2018-08-09T05:00:49.125Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android基础(二)">
-<meta name="twitter:description" content="1.静态内部类,内部类,匿名内部类分别是什么?为什么内部类会持有外部类的引用?持有的引用是this还是其他?​    静态内部类：使用static修饰的内部类 ​    内部类：就是在某个类的内部又定义了一个类，内部类所嵌入的类称为外部类 ​    匿名内部类：使用new生成的内部类  内部类的产生依赖于外部类，持有的引用是类名.this 2.Java中try catch finally的执行顺">
+<meta name="twitter:description" content="1.静态内部类,内部类,匿名内部类分别是什么?为什么内部类会持有外部类的引用?持有的引用是this还是其他?​    静态内部类：使用static修饰的内部类 ​    内部类：就是在某个类的内部又定义了一个类，内部类所嵌入的类称为外部类 ​    匿名内部类：使用new生成的内部类 内部类的产生依赖于外部类，持有的引用是类名.this 2.Java中try catch finally的执行顺序">
 
 
 
@@ -232,14 +232,6 @@
         
         
           
-          <li class="menu-item menu-item-about">
-    <a href="/about/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />について</a>
-  </li>
-        
-        
-        
-          
           <li class="menu-item menu-item-categories">
     <a href="/categories/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-th"></i> <br />カテゴリ</a>
@@ -251,6 +243,14 @@
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />アーカイブ</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />について</a>
   </li>
 
       
@@ -435,7 +435,7 @@
 <h3 id="1-静态内部类-内部类-匿名内部类分别是什么-为什么内部类会持有外部类的引用-持有的引用是this还是其他"><a href="#1-静态内部类-内部类-匿名内部类分别是什么-为什么内部类会持有外部类的引用-持有的引用是this还是其他" class="headerlink" title="1.静态内部类,内部类,匿名内部类分别是什么?为什么内部类会持有外部类的引用?持有的引用是this还是其他?"></a><strong>1.静态内部类,内部类,匿名内部类分别是什么?为什么内部类会持有外部类的引用?持有的引用是this还是其他?</strong></h3><p>​    <strong>静态内部类：</strong>使用static修饰的内部类</p>
 <p>​    <strong>内部类：</strong>就是在某个类的内部又定义了一个类，内部类所嵌入的类称为外部类</p>
 <p>​    <strong>匿名内部类：</strong>使用new生成的内部类</p>
-<pre><code> 内部类的产生依赖于外部类，持有的引用是类名.this
+<pre><code>内部类的产生依赖于外部类，持有的引用是类名.this
 </code></pre><h3 id="2-Java中try-catch-finally的执行顺序"><a href="#2-Java中try-catch-finally的执行顺序" class="headerlink" title="2.Java中try catch finally的执行顺序?"></a><strong>2.Java中try catch finally的执行顺序?</strong></h3><p>​    先执行try中代码，如果发生异常执行catch中代码，最后一定会执行finally中代码</p>
 <h3 id="3-equals与-的区别"><a href="#3-equals与-的区别" class="headerlink" title="3.equals与==的区别?"></a><strong>3.equals与==的区别?</strong></h3><p>​    ==是判断两个变量或实例是不是指向同一个内存空间 equals是判断两个变量或实例所指向的内存空间的值是         不是相等</p>
 <h3 id="4-Java的四种引用的区别"><a href="#4-Java的四种引用的区别" class="headerlink" title="4.Java的四种引用的区别"></a><strong>4.Java的四种引用的区别</strong></h3><p>​    <strong>强引用：</strong>如果一个对象具有强引用，它就不会被垃圾回收器(GC)回收。即使当前内存空间不足，JVM 也不会回收它，而是抛出 OutOfMemoryError 错误，使程序异常终止。如果想中断强引用和某个对象之间的关联，可以显式地将引用赋值为null，这样一来的话，JVM在合适的时间就会回收该对象</p>
@@ -456,7 +456,7 @@
 <p>​    <strong>POST :</strong>提交数据给指定的服务器处理</p>
 <p>​    <strong>区别:</strong>    POST请求不能被缓存下来</p>
 <p>​            POST请求不会保存在浏览器浏览记录中</p>
-<pre><code>         以POST请求的URL无法保存为浏览器书签
+<pre><code>以POST请求的URL无法保存为浏览器书签
 </code></pre><p>​            POST请求没有长度限制</p>
 <h1 id="Fragment相关面试题"><a href="#Fragment相关面试题" class="headerlink" title="Fragment相关面试题:"></a><strong>Fragment相关面试题:</strong></h1><h3 id="1-Fragment-如何实现类似-Activity-栈的压栈和出栈效果的"><a href="#1-Fragment-如何实现类似-Activity-栈的压栈和出栈效果的" class="headerlink" title="1.Fragment 如何实现类似 Activity 栈的压栈和出栈效果的"></a><strong>1.Fragment 如何实现类似 Activity 栈的压栈和出栈效果的</strong></h3><p>​    Fragment 的事物管理器内部维持了一个双向链表结构,该结构可以记录我们每次add的</p>
 <p>Fragment 和 replace 的 Fragment，然后当我们点击 back 按钮的时候会自动帮我们实现退栈操作</p>
@@ -722,6 +722,40 @@
           
 
           
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://v3.bootcss.com/getting-started/#download/" title="BootstrapCDN加速" target="_blank">BootstrapCDN加速</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://code.jquery.com/" title="jQueryCDN加速" target="_blank">jQueryCDN加速</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.processon.com/" title="ProcessOn在线制图工具" target="_blank">ProcessOn在线制图工具</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.clipconverter.cc/" title="Youtube Downloader" target="_blank">Youtube Downloader</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://learn.lingvist.com/" title="在线外语词汇积累" target="_blank">在线外语词汇积累</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.cloudflare.com/" title="Cloudflare" target="_blank">Cloudflare</a>
+                  </li>
+                
+              </ul>
+            </div>
           
 
           
