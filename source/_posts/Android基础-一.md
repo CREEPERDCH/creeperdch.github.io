@@ -3,7 +3,10 @@ title: Android基础(一)
 date: 2017-09-19 17:29:33
 tags:
 categories: android
+thumbnail: https://ws2.sinaimg.cn/large/006tKfTcgy1ft8gbz0qfzj31hc0xc7aj.jpg
 ---
+
+<!-- more -->
 
 ### Service的启动方式?如何保证Service不被杀死?
 

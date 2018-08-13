@@ -3,16 +3,16 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: CREEPERDCH's Tech
+title: CREEPERDCH
 subtitle:
 description: 苟利国家生死以
 author: CREEPERDCH
-language: zh-Hans
+language: ja
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://creeperdch.xyz
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -40,9 +40,17 @@ future: true
 highlight:
   enable: true
   line_number: true
-  auto_detect: false
+  auto_detect: true
   tab_replace:
-  
+
+# 代码高亮
+prism_plugin:
+  enable: false
+  mode: 'preprocess'    # realtime/preprocess
+  theme: 'hopscotch'
+  line_number: true    # default false
+  custom_css:     # optional
+
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
@@ -72,6 +80,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
+# mic next diaspora hollow typography
 theme: next
 
 # Deployment

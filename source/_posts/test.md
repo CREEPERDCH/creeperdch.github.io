@@ -3,7 +3,10 @@ title: hexo换了电脑的部署问题
 date: 2018-02-09 15:08:59
 tags: hexo
 categories: hexo
+thumbnail: https://ws4.sinaimg.cn/large/006tKfTcgy1ft8ge7djj9j31kw0w0b29.jpg
 ---
+
+<!-- more -->
 
 作者：skycrown
 

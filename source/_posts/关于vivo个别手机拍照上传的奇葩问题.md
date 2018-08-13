@@ -3,6 +3,7 @@ title: 关于vivo手机拍照上传的奇葩问题
 date: 2018-05-07 12:02:00
 tags: android
 categories: android
+thumbnail: https://ws4.sinaimg.cn/large/006tKfTcgy1ft8fia4snsj31hc0u0gty.jpg
 ---
 
 做拍照上传图片到服务器的的操作
@@ -10,6 +11,8 @@ categories: android
 在做到vivo Y67这个机型时
 
 遇到了一个特别奇葩的问题
+
+<!-- more -->
 
 在拍照点击确定，回调onActivityResult发起上传请求的时候
 
@@ -23,7 +26,7 @@ vivo手机的系统在拍完照，还没有对照片做完处理时
 
 目前只能暂时获取机型特殊处理，如图：
 
-![](https://raw.githubusercontent.com/CREEPERDCH/MarkdownPic/master/特殊机型处理/screenshoot_0507.png)
+![](https://ws1.sinaimg.cn/large/006tNc79gy1ftbhx66a0vj311a064t8y.jpg)
 
 大概的意思就是，检测到特殊型号就延迟十秒去做上传处理
 

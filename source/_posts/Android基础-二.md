@@ -3,7 +3,10 @@ title: Android基础(二)
 date: 2017-09-19 17:42:10
 tags:
 categories: android
+thumbnail: https://ws2.sinaimg.cn/large/006tKfTcgy1ft8gblyzdkj31kw0xm17p.jpg
 ---
+
+<!-- more -->
 
 ### **1.静态内部类,内部类,匿名内部类分别是什么?为什么内部类会持有外部类的引用?持有的引用是this还是其他?**
 

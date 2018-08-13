@@ -3,13 +3,16 @@ title: 利用Github与hexo搭建个人博客的简单步骤
 date: 2017-09-21 13:14:25
 tags: hexo
 categories: hexo
+thumbnail: https://ws4.sinaimg.cn/large/006tKfTcgy1ft8fjfnn94j31kw0npk0u.jpg
 ---
 
-## 	导语
 
-> ​	尽管个人博客的时代已经过去了,但是我想,能够拥有一个完全属于自己的blog,应该还算是一部分人想要做的事情.我会将我搭建这个博客的过程中踩过的坑都贴在下边,为他人提供借鉴.
->
-> ​	这里我使用了NexT的主题,简单明了,推荐给大家.一些针对此主题的配置我也会一一列举出来的.
+
+尽管个人博客的时代已经过去了,但是我想,能够拥有一个完全属于自己的blog,应该还算是一部分人想要做的事情.我会将我搭建这个博客的过程中踩过的坑都贴在下边,为他人提供借鉴.
+
+这里我使用了NexT的主题,简单明了,推荐给大家.一些针对此主题的配置我也会一一列举出来的.
+
+<!-- more -->
 
 ## 安装环境
 
@@ -17,15 +20,15 @@ categories: hexo
 
 ​	[Github官网](https://github.com/)
 
-![](https://github.com/CREEPERDCH/MarkdownPic/blob/master/%E5%88%A9%E7%94%A8Github%E4%B8%8Ehexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%AE%80%E5%8D%95%E6%AD%A5%E9%AA%A4/github_sign.png?raw=true)
+![](https://ws1.sinaimg.cn/large/006tNc79gy1ftbhyutvupj30te0f074p.jpg)
 
 ​	注册账号就不详细说了,然后是创建一个仓库
 
-![](https://github.com/CREEPERDCH/MarkdownPic/blob/master/%E5%88%A9%E7%94%A8Github%E4%B8%8Ehexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%AE%80%E5%8D%95%E6%AD%A5%E9%AA%A4/create_repo.png?raw=true)
+![](https://ws1.sinaimg.cn/large/006tNc79gy1ftbhz6nv6zj30dp027mwy.jpg)
 
 ​	然后新建仓库名字格式为"yourname.github.io", 注意将 yourname 换成你自己的名字
 
-![](https://github.com/CREEPERDCH/MarkdownPic/blob/master/%E5%88%A9%E7%94%A8Github%E4%B8%8Ehexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%AE%80%E5%8D%95%E6%AD%A5%E9%AA%A4/create_io.png?raw=true)
+![](https://ws1.sinaimg.cn/large/006tNc79gy1ftbhzfh7rwj30no0gs74i.jpg)
 
 ​	然后应该是配置SSH,这样以后你每次推送博客去网站的时候都需要输入Github账号密码,不过这一步可有可无,如果你感兴趣,可以Google一下具体操作,并不复杂,这里就再赘述了.
 
@@ -35,7 +38,7 @@ categories: hexo
 
 ​	[Git官网](https://git-scm.com/)
 
-![](https://github.com/CREEPERDCH/MarkdownPic/blob/master/%E5%88%A9%E7%94%A8Github%E4%B8%8Ehexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%AE%80%E5%8D%95%E6%AD%A5%E9%AA%A4/git_install.png?raw=true)
+![](https://ws4.sinaimg.cn/large/006tNc79gy1ftbhzqss27j30s90b33zy.jpg)
 
 ​	安装过程并不复杂,按照提示下一步就好了.
 
@@ -43,7 +46,7 @@ categories: hexo
 
 ​	[Node.js官网](https://nodejs.org/en/)
 
-![](https://github.com/CREEPERDCH/MarkdownPic/blob/master/%E5%88%A9%E7%94%A8Github%E4%B8%8Ehexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%AE%80%E5%8D%95%E6%AD%A5%E9%AA%A4/node.png?raw=true)
+![](https://ws2.sinaimg.cn/large/006tNc79gy1ftbhzzctr4j30o408z0ss.jpg)
 
 ​	安装好Node.js之后就可以使用npm命令了,首先我们可以验证一下上述环境是否准备完毕
 
@@ -57,7 +60,7 @@ git --version
 node -v
 ```
 
-![](https://github.com/CREEPERDCH/MarkdownPic/blob/master/%E5%88%A9%E7%94%A8Github%E4%B8%8Ehexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%AE%80%E5%8D%95%E6%AD%A5%E9%AA%A4/cmd.png?raw=true)
+![](https://ws1.sinaimg.cn/large/006tNc79gy1ftbi07frggj30nr0c8mwz.jpg)
 
 ​	如果出现上述结果,则表面环境已经正确搭建.
 
@@ -84,11 +87,11 @@ hexo generate
 
 ​	这边用了一位[博主](http://www.jianshu.com/p/863f3f2d1733)的截图
 
-![](https://raw.githubusercontent.com/CoderTian/CoderTian.github.io/master/2015/11/26/github-hexo-blog/firstcommond.png)
+![](https://ws3.sinaimg.cn/large/006tNc79gy1ftbi15qicmj318k06iabs.jpg)
 
 ​	完成后Hexo文件夹内部的结构应该是这样的:
 
-![](https://github.com/CREEPERDCH/MarkdownPic/blob/master/%E5%88%A9%E7%94%A8Github%E4%B8%8Ehexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%AE%80%E5%8D%95%E6%AD%A5%E9%AA%A4/hexo.png?raw=true)
+![](https://ws4.sinaimg.cn/large/006tNc79gy1ftbi1fzj0hj30i408v747.jpg)
 
 ​	到这一步你已经可以在本地预览你的网站了,输入下面的命令开启本地服务:
 
@@ -120,11 +123,11 @@ ERROR Plugin load failed: hexo-server
 
 ​	首先我们需要进到Hexo文件夹根目录下的配置文件 **_config.yml** 文件里:
 
-![](https://github.com/CREEPERDCH/MarkdownPic/blob/master/%E5%88%A9%E7%94%A8Github%E4%B8%8Ehexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%AE%80%E5%8D%95%E6%AD%A5%E9%AA%A4/dp.png?raw=true)
+![](https://ws2.sinaimg.cn/large/006tNc79gy1ftbi1u9hlcj30vn0gkt8x.jpg)
 
 ​	打开文件后翻到最下边:
 
-![](https://github.com/CREEPERDCH/MarkdownPic/blob/master/%E5%88%A9%E7%94%A8Github%E4%B8%8Ehexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%AE%80%E5%8D%95%E6%AD%A5%E9%AA%A4/deploy.png?raw=true)
+![](https://ws4.sinaimg.cn/large/006tNc79gy1ftbi21pidoj30k204gt8k.jpg)
 
 ​	注意冒号后边需要加一个空格.
 

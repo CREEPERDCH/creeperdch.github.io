@@ -3,13 +3,14 @@ title: Markdown基础语法
 date: 2015-04-19 15:07:47
 tags: markdown
 categories: markdown
+thumbnail: https://ws1.sinaimg.cn/large/006tKfTcgy1ft8gcd3cacj31hc0u0n3h.jpg
 ---
 
 >Markdown is a lightweight markup language with plain text formatting syntax. It is designed so that it can be converted to HTML and many other formats using a tool by the same name.[8] Markdown is often used to format readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor. As the initial description of Markdown contained ambiguities and unanswered questions, many implementations and extensions of Markdown appeared over the years to answer these issues.
 >
 >​																-------------Wikipedia
 
-
+<!-- more -->
 
 ### 标题
 
@@ -57,7 +58,7 @@ categories: markdown
 
 ### 图片与链接
 
-图片为:![](http://i2.hdslb.com/bfs/archive/73b87af92b5d87c3025f954b649fef08bdd36c8e.jpg)
+图片为:![](https://ws2.sinaimg.cn/large/006tNc79gy1ftbi7ppz2wj30k00ciq2z.jpg)
 
 链接为: '[]()'
 
