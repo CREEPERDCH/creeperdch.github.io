@@ -1,787 +1,205 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<html>
 
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<html class="theme-next mist use-motion" lang="ja">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
-<meta name="theme-color" content="#222">
-
-
-
-
-
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=6.4.0" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/glasses.svg?v=6.4.0">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=6.4.0">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=6.4.0">
-
-
-  <link rel="mask-icon" href="/images/glasses.svg?v=6.4.0" color="#222">
-
-
-
-
-
-
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Mist',
-    version: '6.4.0',
-    sidebar: {"position":"left","width":300,"display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    fastclick: false,
-    lazyload: false,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-  
-
-
-
-
-  <meta name="description" content="苟利国家生死以">
-<meta property="og:type" content="website">
-<meta property="og:title" content="gallery">
-<meta property="og:url" content="http://creeperdch.xyz/gallery/index.html">
-<meta property="og:site_name" content="CREEPERDCH">
-<meta property="og:description" content="苟利国家生死以">
-<meta property="og:locale" content="ja">
-<meta property="og:updated_time" content="2018-08-09T06:35:13.626Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="gallery">
-<meta name="twitter:description" content="苟利国家生死以">
-
-
-
-
-
-
-  <link rel="canonical" href="http://creeperdch.xyz/gallery/"/>
-
-
-
-<script type="text/javascript" id="page.configurations">
-  CONFIG.page = {
-    sidebar: "",
-  };
-</script>
-
-  <title>gallery | CREEPERDCH</title>
-  
-
-
-
-
-
-
-
-
-
-  <noscript>
-  <style type="text/css">
-    .use-motion .motion-element,
-    .use-motion .brand,
-    .use-motion .menu-item,
-    .sidebar-inner,
-    .use-motion .post-block,
-    .use-motion .pagination,
-    .use-motion .comments,
-    .use-motion .post-header,
-    .use-motion .post-body,
-    .use-motion .collection-title { opacity: initial; }
-
-    .use-motion .logo,
-    .use-motion .site-title,
-    .use-motion .site-subtitle {
-      opacity: initial;
-      top: initial;
-    }
-
-    .use-motion {
-      .logo-line-before i { left: initial; }
-      .logo-line-after i { right: initial; }
-    }
-  </style>
-</noscript>
-
+	<link rel="bookmark"  type="image/x-icon"  href="/img/favicon.ico"/>
+	<link rel="shortcut icon" href="/img/favicon.ico">
+	
+		    <title>
+    CREEPERDCH
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    
+<link rel="stylesheet" href="/css/mic_gallery.css" />
+
+	
 <link rel="stylesheet" href="/css/prism-hopscotch.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="ja">
-
-  
-  
     
-  
-
-  <div class="container sidebar-position-left page-post-detail">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">CREEPERDCH</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
-    </div>
-    
-  </div>
-
-  <div class="site-nav-toggle">
-    <button aria-label="ナビゲーションバーの切り替え">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
-  </div>
-</div>
-
-
-
-<nav class="site-nav">
-  
-    <ul id="menu" class="menu">
-      
+        <!-- Single Gallery Page -->
         
-        
-        
-          
-          <li class="menu-item menu-item-home">
-    <a href="/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />ホーム</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-categories">
-    <a href="/categories/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />カテゴリ</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-archives">
-    <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />アーカイブ</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-about">
-    <a href="/about/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />について</a>
-  </li>
+<body class="is-loading-0 is-loading-1 is-loading-2">
+		<!-- Main -->
+			<div id="gallery_main">
 
-      
-      
-    </ul>
-  
+				<!-- Header -->
+					<header id="gallery_header">
+						<h1>CREEPERDCH</h1>
+						<p>Just another fine responsive    author : <a href="/" style="border-bottom: none;">CREEPERDCH</a></p>
+						<ul class="gallery_icons">
+		                    
+		                    <li>
+		                        <a title="github" href="https://github.com/CREEPERDCH" target="_blank" rel="noopener">
+		                            <i class="icon fa fa-github"></i>
+		                        </a>
+		                    </li>
+		                    
+		                    <li>
+		                        <a title="twitter" href="https://twitter.com/wwwwyn4240" target="_blank" rel="noopener">
+		                            <i class="icon fa fa-twitter"></i>
+		                        </a>
+		                    </li>
+		                    
+		                    <li>
+		                        <a title="facebook" href="https://www.facebook.com/wwwwyn" target="_blank" rel="noopener">
+		                            <i class="icon fa fa-facebook"></i>
+		                        </a>
+		                    </li>
+		                    
+		                    <li>
+		                        <a title="instagram" href="https://www.instagram.com/creeperdch/" target="_blank" rel="noopener">
+		                            <i class="icon fa fa-instagram"></i>
+		                        </a>
+		                    </li>
+		                    
+						</ul>
+					</header>
 
-  
-    
+				<!-- Thumbnail -->
+					<section id="gallery_thumbnails">
+		           
+		                					
+								<article>
+									<a class="thumbnail" href="https://ws1.sinaimg.cn/large/006tNc79gy1ftbjy8cjmoj31kw11xteh.jpg" data-position="left center"><img src="https://ws1.sinaimg.cn/large/006tNc79gy1ftbjy8cjmoj31kw11xteh.jpg" alt="" /></a>
+									<h2>Tokyo</h2>
+									<p>早上喝绿豆汤</p>
+								</article>
+			                					
+								<article>
+									<a class="thumbnail" href="https://ws1.sinaimg.cn/large/006tNc79gy1ftblgrb3mkj31jk10tgqb.jpg" data-position="left center"><img src="https://ws1.sinaimg.cn/large/006tNc79gy1ftblgrb3mkj31jk10tgqb.jpg" alt="" /></a>
+									<h2>Peking</h2>
+									<p>中午不吃饭了</p>
+								</article>
+			                					
+								<article>
+									<a class="thumbnail" href="https://ws4.sinaimg.cn/large/006tNc79gy1ftbligzhnbj31jk11143r.jpg" data-position="left center"><img src="https://ws4.sinaimg.cn/large/006tNc79gy1ftbligzhnbj31jk11143r.jpg" alt="" /></a>
+									<h2>Aleksander</h2>
+									<p>就知道吃</p>
+								</article>
+			                					
+								<article>
+									<a class="thumbnail" href="https://ws1.sinaimg.cn/large/006tNc79gy1ftbs6klklej31hc0u0abt.jpg" data-position="left center"><img src="https://ws1.sinaimg.cn/large/006tNc79gy1ftbs6klklej31hc0u0abt.jpg" alt="" /></a>
+									<h2>Greece</h2>
+									<p>记得给某人打电话</p>
+								</article>
+			                					
+								<article>
+									<a class="thumbnail" href="https://ws4.sinaimg.cn/large/006tNc79gy1ftbloyd0nsj31kw11y490.jpg" data-position="left center"><img src="https://ws4.sinaimg.cn/large/006tNc79gy1ftbloyd0nsj31kw11y490.jpg" alt="" /></a>
+									<h2>Egypt</h2>
+									<p>配置多语言文件这种事能把最有耐心的人烦死</p>
+								</article>
+			                					
+								<article>
+									<a class="thumbnail" href="https://ws1.sinaimg.cn/large/006tNc79gy1ftbo5m79vmj31kw11zn2f.jpg" data-position="left center"><img src="https://ws1.sinaimg.cn/large/006tNc79gy1ftbo5m79vmj31kw11zn2f.jpg" alt="" /></a>
+									<h2>Romen</h2>
+									<p>何事秋风悲画扇</p>
+								</article>
+			                					
+								<article>
+									<a class="thumbnail" href="https://ws2.sinaimg.cn/large/006tNc79gy1ftbserlwn8j30s210sjw0.jpg" data-position="left center"><img src="https://ws2.sinaimg.cn/large/006tNc79gy1ftbserlwn8j30s210sjw0.jpg" alt="" /></a>
+									<h2>Bangkok</h2>
+									<p>不爱看球</p>
+								</article>
+			                					
+								<article>
+									<a class="thumbnail" href="https://ws1.sinaimg.cn/large/006tKfTcgy1ftbshweop6j30sg10gn24.jpg" data-position="left center"><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1ftbshweop6j30sg10gn24.jpg" alt="" /></a>
+									<h2>Venice</h2>
+									<p>public static void main()//呵呵</p>
+								</article>
+			                					
+								<article>
+									<a class="thumbnail" href="https://ws1.sinaimg.cn/large/006tKfTcgy1ftbsjb5ylvj30sg10f785.jpg" data-position="left center"><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1ftbsjb5ylvj30sg10f785.jpg" alt="" /></a>
+									<h2>Sydney</h2>
+									<p>I❤️SZ</p>
+								</article>
+			                					
+								<article>
+									<a class="thumbnail" href="https://ws4.sinaimg.cn/large/006tNc79gy1ftdzowl7x2j30ju0pt0um.jpg" data-position="left center"><img src="https://ws4.sinaimg.cn/large/006tNc79gy1ftdzowl7x2j30ju0pt0um.jpg" alt="" /></a>
+									<h2>Paris</h2>
+									<p>ARouter//alibaba</p>
+								</article>
+			                					
+								<article>
+									<a class="thumbnail" href="https://ws3.sinaimg.cn/large/006tNc79gy1ftg2zt8sqhj30se10rafa.jpg" data-position="left center"><img src="https://ws3.sinaimg.cn/large/006tNc79gy1ftg2zt8sqhj30se10rafa.jpg" alt="" /></a>
+									<h2>Toronto</h2>
+									<p>早上不吃饭中午去</p>
+								</article>
+			                					
+								<article>
+									<a class="thumbnail" href="https://ws2.sinaimg.cn/large/006tNc79gy1fthggpa659j30sg0ya76q.jpg" data-position="left center"><img src="https://ws2.sinaimg.cn/large/006tNc79gy1fthggpa659j30sg0ya76q.jpg" alt="" /></a>
+									<h2>Osaka</h2>
+									<p>单休的日子</p>
+								</article>
+			                					
+								<article>
+									<a class="thumbnail" href="https://ws1.sinaimg.cn/large/006tNc79gy1ftkq3kem1vj31ai1q0tnk.jpg" data-position="left center"><img src="https://ws1.sinaimg.cn/large/006tNc79gy1ftkq3kem1vj31ai1q0tnk.jpg" alt="" /></a>
+									<h2>Guangzhou</h2>
+									<p>头晕</p>
+								</article>
+			                					
+								<article>
+									<a class="thumbnail" href="https://ws3.sinaimg.cn/large/006tNc79gy1ftlvs9pw22j30u01hc440.jpg" data-position="left center"><img src="https://ws3.sinaimg.cn/large/006tNc79gy1ftlvs9pw22j30u01hc440.jpg" alt="" /></a>
+									<h2>NewYork</h2>
+									<p>占位</p>
+								</article>
+			                					
+								<article>
+									<a class="thumbnail" href="https://ws3.sinaimg.cn/large/006tNc79gy1ftkqac9pvrj31hc0zkafr.jpg" data-position="left center"><img src="https://ws3.sinaimg.cn/large/006tNc79gy1ftkqac9pvrj31hc0zkafr.jpg" alt="" /></a>
+									<h2>Shanghai</h2>
+									<p>奇变偶不变</p>
+								</article>
+			                					
+								<article>
+									<a class="thumbnail" href="https://ws2.sinaimg.cn/large/006tNc79gy1ftlvob75coj31kw0w04q4.jpg" data-position="left center"><img src="https://ws2.sinaimg.cn/large/006tNc79gy1ftlvob75coj31kw0w04q4.jpg" alt="" /></a>
+									<h2>Boston</h2>
+									<p>符号看象限</p>
+								</article>
+			                					
+								<article>
+									<a class="thumbnail" href="https://ws1.sinaimg.cn/large/006tKfTcgy1fto91izjg1j31ac1jkdth.jpg" data-position="left center"><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1fto91izjg1j31ac1jkdth.jpg" alt="" /></a>
+									<h2>Lasa</h2>
+									<p>Thailand</p>
+								</article>
+			                					
+								<article>
+									<a class="thumbnail" href="https://ws4.sinaimg.cn/large/006tKfTcgy1fu02012gpej30sg15hn0r.jpg" data-position="left center"><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1fu02012gpej30sg15hn0r.jpg" alt="" /></a>
+									<h2>Manhattan</h2>
+									<p>做自己</p>
+								</article>
+			                					
+								<article>
+									<a class="thumbnail" href="https://ws3.sinaimg.cn/large/0069RVTdgy1fu0wncs9u2j31kw11zadh.jpg" data-position="left center"><img src="https://ws3.sinaimg.cn/large/0069RVTdgy1fu0wncs9u2j31kw11zadh.jpg" alt="" /></a>
+									<h2>Japan</h2>
+									<p>红茶喝药//划掉</p>
+								</article>
+			                					
+								<article>
+									<a class="thumbnail" href="https://ws3.sinaimg.cn/large/0069RVTdgy1fu2o7elmh5j31kw11xwmb.jpg" data-position="left center"><img src="https://ws3.sinaimg.cn/large/0069RVTdgy1fu2o7elmh5j31kw11xwmb.jpg" alt="" /></a>
+									<h2>Iceland</h2>
+									<p>念念不忘,必有回响</p>
+								</article>
+			                
+			            
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
+					</section>
 
-  
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="copyright">
+                <li>&copy;Powered By <a href="https://creeperdch.xyz/" style="border-bottom: none;">creeper</a></li>
+                <li>Design: <a href="http://creeperdch.xyz " style="border-bottom: none;">miccall</a></li>
+						</ul>
+					</footer>
 
+			</div>
+						<script src="/js/jquery.min.js"></script>
+			<script src="/js/gallery_skel.min.js"></script>
+			<!--[if lte IE 8]><script src="/js/ie/respond.min.js"></script><![endif]-->
+			<script src="/js/mic_gallery.js"></script>
 
-  
-
-  
-</nav>
-
-
-
-  
-
-
-
-</div>
-    </header>
-
-    
-
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-          <div id="content" class="content">
-            
-
-  <div id="posts" class="posts-expand">
-    
-    
-    
-    <div class="post-block page">
-      <header class="post-header">
-
-<h1 class="post-title" itemprop="name headline">gallery</h1>
-
-<div class="post-meta">
-  
-  
-
-
-
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
-        
-        
-          
-        
-      </div>
-      
-      
-      
-    </div>
-    
-
-
-
-    
-    
-    
-  </div>
-
-
-          </div>
-          
-
-  
-    <div class="comments" id="comments">
-    </div>
-  
-
-
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    
-    <div class="sidebar-inner">
-
-      
-
-      
-
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <img class="site-author-image" itemprop="image"
-                src="/images/avatar.jpg"
-                alt="CREEPERDCH" />
-            
-              <p class="site-author-name" itemprop="name">CREEPERDCH</p>
-              <p class="site-description motion-element" itemprop="description">苟利国家生死以</p>
-          </div>
-
-          
-            <nav class="site-state motion-element">
-              
-                <div class="site-state-item site-state-posts">
-                
-                  <a href="/archives/">
-                
-                    <span class="site-state-item-count">23</span>
-                    <span class="site-state-item-name">ポスト</span>
-                  </a>
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-categories">
-                  <a href="/categories/index.html">
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">8</span>
-                    <span class="site-state-item-name">カテゴリ</span>
-                  </a>
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-tags">
-                  
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">10</span>
-                    <span class="site-state-item-name">タグ</span>
-                  
-                </div>
-              
-            </nav>
-          
-
-          
-
-          
-            <div class="links-of-author motion-element">
-              
-                <span class="links-of-author-item">
-                  <a href="https://github.com/CREEPERDCH" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
-                  
-                </span>
-              
-                <span class="links-of-author-item">
-                  <a href="mailto:wwwwyn4240@gmail.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-                  
-                </span>
-              
-                <span class="links-of-author-item">
-                  <a href="https://twitter.com/wwwwyn4240" target="_blank" title="Twitter"><i class="fa fa-fw fa-twitter"></i>Twitter</a>
-                  
-                </span>
-              
-                <span class="links-of-author-item">
-                  <a href="https://www.facebook.com/wwwwyn" target="_blank" title="FB Page"><i class="fa fa-fw fa-facebook"></i>FB Page</a>
-                  
-                </span>
-              
-                <span class="links-of-author-item">
-                  <a href="https://instagram.com/creeperdch" target="_blank" title="Instagram"><i class="fa fa-fw fa-instagram"></i>Instagram</a>
-                  
-                </span>
-              
-            </div>
-          
-
-          
-          
-
-          
-          
-            <div class="links-of-blogroll motion-element links-of-blogroll-block">
-              <div class="links-of-blogroll-title">
-                <i class="fa  fa-fw fa-link"></i>
-                Links
-              </div>
-              <ul class="links-of-blogroll-list">
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="http://v3.bootcss.com/getting-started/#download/" title="BootstrapCDN加速" target="_blank">BootstrapCDN加速</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="https://code.jquery.com/" title="jQueryCDN加速" target="_blank">jQueryCDN加速</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="https://www.processon.com/" title="ProcessOn在线制图工具" target="_blank">ProcessOn在线制图工具</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="http://www.clipconverter.cc/" title="Youtube Downloader" target="_blank">Youtube Downloader</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="https://learn.lingvist.com/" title="在线外语词汇积累" target="_blank">在线外语词汇积累</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="https://www.cloudflare.com/" title="Cloudflare" target="_blank">Cloudflare</a>
-                  </li>
-                
-              </ul>
-            </div>
-          
-
-          
-            
-          
-          
-
-        </div>
-      </section>
-
-      
-
-      
-
-    </div>
-  </aside>
-
+	<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/Epsilon2.1.model.json"},"display":{"position":"left","width":100,"height":200},"mobile":{"show":false},"log":false});</script><script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/Epsilon2.1.model.json"},"display":{"position":"left","width":100,"height":200},"mobile":{"show":false},"log":false});</script></body>
 
         
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; 2015 – <span itemprop="copyrightYear">2018</span>
-  <span class="with-love" id="animate">
-    <i class="fa fa-User"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">岂因祸福避趋之</span>
-<span>
-  <img src="https://api.gushi.ci/shuqing/aiqing.svg?font-size=15&spacing=1">
-</span>
-  
-
-  
-</div>
-
-
-
-
-
-
-
-
-
-
-
-        
-<div class="busuanzi-count">
-  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-  
-    <span class="site-uv" title="合計閲覧者数">
-      <i class="fa fa-user"></i>
-      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
-    </span>
-  
-
-  
-    <span class="site-pv" title="閲覧合計数">
-      <i class="fa fa-eye"></i>
-      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
-    </span>
-  
-</div>
-
-
-
-
-
-
-
-
-
-        
-      </div>
-    </footer>
-
     
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-	
-    
-
-    
-  </div>
-
-  
-
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/reading_progress/reading_progress.js"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=6.4.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=6.4.0"></script>
-
-
-
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=6.4.0"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.0"></script>
-
-
-
-  
-
-
-
-  
-
-
-
-
-
-
-
-
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  
-  
-  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-  
-  <script type="text/javascript">
-    var GUEST = ['nick','mail','link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(function (item) {
-      return GUEST.indexOf(item)>-1;
-    });
-    new Valine({
-        el: '#comments' ,
-        verify: false,
-        notify: false,
-        appId: 'H78Pg6j0lgmXRgYJayNMsIe3-gzGzoHsz',
-        appKey: 'YwHuAUtNNefaFp7HySR7VvuW',
-        placeholder: 'ヾﾉ≧∀≦)o来快活啊!',
-        avatar:'https://gravatar.loli.net/avatar/',
-        meta:guest,
-        pageSize:'10' || 10,
-        visitor: false
-    });
-  </script>
-
-
-
-  
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/Epsilon2.1.model.json"},"display":{"position":"left","width":100,"height":200},"mobile":{"show":false},"log":false});</script></body>
 </html>
