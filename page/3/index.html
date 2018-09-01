@@ -2102,6 +2102,9 @@ Service的启动方式?如何保证Service不被杀死?​    两种启动方式
         var result = document.execCommand('copy')
         document.body.removeChild(ta)
         
+          if(result)$(this).text('コピーしました')
+          else $(this).text('コピーに失敗しました')
+        
         $(this).blur()
       })).on('mouseleave', function (e) {
         var $b = $(this).find('.copy-btn')
