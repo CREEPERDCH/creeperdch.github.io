@@ -4,17 +4,19 @@
 
     
   <url>
-    <loc>http://creeperdch.xyz/2018/10/09/%E4%B8%A7%E6%B0%94%E5%8D%81%E8%B6%B3/</loc>
-    <lastmod>2018-10-09T10:54:56.671Z</lastmod>
+    <loc>http://creeperdch.xyz/2018/10/10/%E7%B4%AB%E7%91%AD%E7%91%AD%E7%9A%84%E5%AD%97%E5%B8%96-%E5%8D%81%E6%9C%88/</loc>
+    <lastmod>2018-10-10T02:20:05.649Z</lastmod>
     <data>
         <display>
-        <title>丧气十足</title>
-        <pubTime>2018-10-09T10:46:27.000Z</pubTime>
+        <title>紫瑭瑭的字帖(十月)</title>
+        <pubTime>2018-10-10T02:08:47.000Z</pubTime>
         
+        <tag>练字</tag>
+         
          
            
              
-              <breadCrumb title="nonsense" url="http://creeperdch.xyz/categories/nonsense/"/>
+              <breadCrumb title="字帖" url="http://creeperdch.xyz/categories/%E5%AD%97%E5%B8%96/"/>
           
         </display>
     </data>
@@ -23,7 +25,7 @@
     
   <url>
     <loc>http://creeperdch.xyz/2018/09/01/%E7%B4%AB%E7%91%AD%E7%91%AD%E7%9A%84%E5%AD%97%E5%B8%96-%E4%B9%9D%E6%9C%88/</loc>
-    <lastmod>2018-09-30T03:19:54.649Z</lastmod>
+    <lastmod>2018-10-10T02:09:46.548Z</lastmod>
     <data>
         <display>
         <title>紫瑭瑭的字帖(九月)</title>
@@ -35,6 +37,24 @@
            
              
               <breadCrumb title="字帖" url="http://creeperdch.xyz/categories/%E5%AD%97%E5%B8%96/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://creeperdch.xyz/2018/10/09/%E4%B8%A7%E6%B0%94%E5%8D%81%E8%B6%B3/</loc>
+    <lastmod>2018-10-09T10:54:56.671Z</lastmod>
+    <data>
+        <display>
+        <title>丧气十足</title>
+        <pubTime>2018-10-09T10:46:27.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="nonsense" url="http://creeperdch.xyz/categories/nonsense/"/>
           
         </display>
     </data>
