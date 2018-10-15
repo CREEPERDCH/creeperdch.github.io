@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://creeperdch.xyz/"/>
-  <updated>2018-10-12T03:30:30.955Z</updated>
+  <updated>2018-10-15T03:38:33.001Z</updated>
   <id>http://creeperdch.xyz/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Android 透明度大全</title>
+    <link href="http://creeperdch.xyz/2018/10/15/Android-%E9%80%8F%E6%98%8E%E5%BA%A6%E5%A4%A7%E5%85%A8/"/>
+    <id>http://creeperdch.xyz/2018/10/15/Android-透明度大全/</id>
+    <published>2018-10-15T03:14:44.000Z</published>
+    <updated>2018-10-15T03:38:33.001Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="透明度的计算"><a href="#透明度的计算" class="headerlink" title="透明度的计算"></a><strong>透明度的计算</strong></h3><a id="more"></a><ul><li>透明度分为256个等级，即 <strong>0 - 256</strong>，<strong>0</strong>就是透明，<strong>255</strong>就是不透明</li><li>透明度 <strong>（透明）0 –&gt; 255（不透明）</strong> 对应着16进制 <strong>（透明）00 –&gt; FF（不透明）</strong></li></ul><p>表格里的透明度值的计算方式是：（A：透明度； H：16进制）</p><p><strong>255*(100% - A%)</strong> 通过计算器转为16进制 <strong>H</strong></p><p>因为计算结果取整数，所以可能会有一个进制位的误差，比如50%的透明度值，上面“1.透明度的计算”中的计算是127，16进制为7F，这里计算是127.5，四舍五入为128，16进制为80。所以，看到这里不用惊慌，7F跟80肉眼看起来是差不多的，不用去计较</p><p><strong>00是完全透明(百分百透明)，FF就是完全不透明</strong></p><h3 id="透明度表格-区分于不透明度"><a href="#透明度表格-区分于不透明度" class="headerlink" title="透明度表格(区分于不透明度)"></a><strong>透明度表格(区分于不透明度)</strong></h3><table><thead><tr><th style="text-align:left"><strong>透明度(%)</strong></th><th style="text-align:right"><strong>16进制表示</strong></th></tr></thead><tbody><tr><td style="text-align:left">100</td><td style="text-align:right">00</td></tr><tr><td style="text-align:left">99</td><td style="text-align:right">03</td></tr><tr><td style="text-align:left">98</td><td style="text-align:right">05</td></tr><tr><td style="text-align:left">97</td><td style="text-align:right">07</td></tr><tr><td style="text-align:left">96</td><td style="text-align:right">0A</td></tr><tr><td style="text-align:left">95</td><td style="text-align:right">0D</td></tr><tr><td style="text-align:left">94</td><td style="text-align:right">0F</td></tr><tr><td style="text-align:left">93</td><td style="text-align:right">12</td></tr><tr><td style="text-align:left">92</td><td style="text-align:right">14</td></tr><tr><td style="text-align:left">91</td><td style="text-align:right">17</td></tr><tr><td style="text-align:left">90</td><td style="text-align:right">1A</td></tr><tr><td style="text-align:left">89</td><td style="text-align:right">1C</td></tr><tr><td style="text-align:left">88</td><td style="text-align:right">1E</td></tr><tr><td style="text-align:left">87</td><td style="text-align:right">21</td></tr><tr><td style="text-align:left">86</td><td style="text-align:right">24</td></tr><tr><td style="text-align:left">85</td><td style="text-align:right">26</td></tr><tr><td style="text-align:left">84</td><td style="text-align:right">29</td></tr><tr><td style="text-align:left">83</td><td style="text-align:right">2B</td></tr><tr><td style="text-align:left">82</td><td style="text-align:right">2E</td></tr><tr><td style="text-align:left">81</td><td style="text-align:right">30</td></tr><tr><td style="text-align:left">80</td><td style="text-align:right">33</td></tr><tr><td style="text-align:left">79</td><td style="text-align:right">36</td></tr><tr><td style="text-align:left">78</td><td style="text-align:right">38</td></tr><tr><td style="text-align:left">77</td><td style="text-align:right">3B</td></tr><tr><td style="text-align:left">76</td><td style="text-align:right">3D</td></tr><tr><td style="text-align:left">75</td><td style="text-align:right">40</td></tr><tr><td style="text-align:left">74</td><td style="text-align:right">42</td></tr><tr><td style="text-align:left">73</td><td style="text-align:right">45</td></tr><tr><td style="text-align:left">72</td><td style="text-align:right">47</td></tr><tr><td style="text-align:left">71</td><td style="text-align:right">4A</td></tr><tr><td style="text-align:left">70</td><td style="text-align:right">4D</td></tr><tr><td style="text-align:left">69</td><td style="text-align:right">4F</td></tr><tr><td style="text-align:left">68</td><td style="text-align:right">52</td></tr><tr><td style="text-align:left">67</td><td style="text-align:right">54</td></tr><tr><td style="text-align:left">66</td><td style="text-align:right">57</td></tr><tr><td style="text-align:left">65</td><td style="text-align:right">59</td></tr><tr><td style="text-align:left">64</td><td style="text-align:right">5C</td></tr><tr><td style="text-align:left">63</td><td style="text-align:right">5E</td></tr><tr><td style="text-align:left">62</td><td style="text-align:right">61</td></tr><tr><td style="text-align:left">61</td><td style="text-align:right">63</td></tr><tr><td style="text-align:left">60</td><td style="text-align:right">66</td></tr><tr><td style="text-align:left">59</td><td style="text-align:right">69</td></tr><tr><td style="text-align:left">58</td><td style="text-align:right">6B</td></tr><tr><td style="text-align:left">57</td><td style="text-align:right">6E</td></tr><tr><td style="text-align:left">56</td><td style="text-align:right">70</td></tr><tr><td style="text-align:left">55</td><td style="text-align:right">73</td></tr><tr><td style="text-align:left">54</td><td style="text-align:right">75</td></tr><tr><td style="text-align:left">53</td><td style="text-align:right">78</td></tr><tr><td style="text-align:left">52</td><td style="text-align:right">7A</td></tr><tr><td style="text-align:left">51</td><td style="text-align:right">7D</td></tr><tr><td style="text-align:left">50</td><td style="text-align:right">80</td></tr><tr><td style="text-align:left">49</td><td style="text-align:right">82</td></tr><tr><td style="text-align:left">48</td><td style="text-align:right">85</td></tr><tr><td style="text-align:left">47</td><td style="text-align:right">87</td></tr><tr><td style="text-align:left">46</td><td style="text-align:right">8A</td></tr><tr><td style="text-align:left">45</td><td style="text-align:right">8C</td></tr><tr><td style="text-align:left">44</td><td style="text-align:right">8F</td></tr><tr><td style="text-align:left">43</td><td style="text-align:right">91</td></tr><tr><td style="text-align:left">42</td><td style="text-align:right">94</td></tr><tr><td style="text-align:left">41</td><td style="text-align:right">96</td></tr><tr><td style="text-align:left">40</td><td style="text-align:right">99</td></tr><tr><td style="text-align:left">39</td><td style="text-align:right">9C</td></tr><tr><td style="text-align:left">38</td><td style="text-align:right">9E</td></tr><tr><td style="text-align:left">37</td><td style="text-align:right">A1</td></tr><tr><td style="text-align:left">36</td><td style="text-align:right">A3</td></tr><tr><td style="text-align:left">35</td><td style="text-align:right">A6</td></tr><tr><td style="text-align:left">34</td><td style="text-align:right">A8</td></tr><tr><td style="text-align:left">33</td><td style="text-align:right">AB</td></tr><tr><td style="text-align:left">32</td><td style="text-align:right">AD</td></tr><tr><td style="text-align:left">31</td><td style="text-align:right">B0</td></tr><tr><td style="text-align:left">30</td><td style="text-align:right">B3</td></tr><tr><td style="text-align:left">29</td><td style="text-align:right">B5</td></tr><tr><td style="text-align:left">28</td><td style="text-align:right">B8</td></tr><tr><td style="text-align:left">27</td><td style="text-align:right">BA</td></tr><tr><td style="text-align:left">26</td><td style="text-align:right">BD</td></tr><tr><td style="text-align:left">25</td><td style="text-align:right">BF</td></tr><tr><td style="text-align:left">24</td><td style="text-align:right">C2</td></tr><tr><td style="text-align:left">23</td><td style="text-align:right">C4</td></tr><tr><td style="text-align:left">22</td><td style="text-align:right">C7</td></tr><tr><td style="text-align:left">21</td><td style="text-align:right">C9</td></tr><tr><td style="text-align:left">20</td><td style="text-align:right">CC</td></tr><tr><td style="text-align:left">19</td><td style="text-align:right">CF</td></tr><tr><td style="text-align:left">18</td><td style="text-align:right">D1</td></tr><tr><td style="text-align:left">17</td><td style="text-align:right">D4</td></tr><tr><td style="text-align:left">16</td><td style="text-align:right">D6</td></tr><tr><td style="text-align:left">15</td><td style="text-align:right">D9</td></tr><tr><td style="text-align:left">14</td><td style="text-align:right">DB</td></tr><tr><td style="text-align:left">13</td><td style="text-align:right">DE</td></tr><tr><td style="text-align:left">12</td><td style="text-align:right">E0</td></tr><tr><td style="text-align:left">11</td><td style="text-align:right">E3</td></tr><tr><td style="text-align:left">10</td><td style="text-align:right">E6</td></tr><tr><td style="text-align:left">9</td><td style="text-align:right">E8</td></tr><tr><td style="text-align:left">8</td><td style="text-align:right">EB</td></tr><tr><td style="text-align:left">7</td><td style="text-align:right">ED</td></tr><tr><td style="text-align:left">6</td><td style="text-align:right">F0</td></tr><tr><td style="text-align:left">5</td><td style="text-align:right">F2</td></tr><tr><td style="text-align:left">4</td><td style="text-align:right">F5</td></tr><tr><td style="text-align:left">3</td><td style="text-align:right">F7</td></tr><tr><td style="text-align:left">2</td><td style="text-align:right">FA</td></tr><tr><td style="text-align:left">1</td><td style="text-align:right">FC</td></tr><tr><td style="text-align:left">0</td><td style="text-align:right">FF</td></tr></tbody></table>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;透明度的计算&quot;&gt;&lt;a href=&quot;#透明度的计算&quot; class=&quot;headerlink&quot; title=&quot;透明度的计算&quot;&gt;&lt;/a&gt;&lt;strong&gt;透明度的计算&lt;/strong&gt;&lt;/h3&gt;
+    
+    </summary>
+    
+      <category term="Android" scheme="http://creeperdch.xyz/categories/Android/"/>
+    
+    
+      <category term="Android" scheme="http://creeperdch.xyz/tags/Android/"/>
+    
+  </entry>
   
   <entry>
     <title>紫瑭瑭的字帖(十月)</title>
@@ -449,30 +471,6 @@
     
     
       <category term="练字" scheme="http://creeperdch.xyz/tags/%E7%BB%83%E5%AD%97/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于vivo手机拍照上传的奇葩问题</title>
-    <link href="http://creeperdch.xyz/2018/05/07/%E5%85%B3%E4%BA%8Evivo%E4%B8%AA%E5%88%AB%E6%89%8B%E6%9C%BA%E6%8B%8D%E7%85%A7%E4%B8%8A%E4%BC%A0%E7%9A%84%E5%A5%87%E8%91%A9%E9%97%AE%E9%A2%98/"/>
-    <id>http://creeperdch.xyz/2018/05/07/关于vivo个别手机拍照上传的奇葩问题/</id>
-    <published>2018-05-07T04:02:00.000Z</published>
-    <updated>2018-08-09T04:51:48.937Z</updated>
-    
-    <content type="html"><![CDATA[<p>做拍照上传图片到服务器的的操作</p><p>在做到vivo Y67这个机型时</p><p>遇到了一个特别奇葩的问题</p><a id="more"></a><p>在拍照点击确定，回调onActivityResult发起上传请求的时候</p><p>报了一个“expect 220 bytes but received 8192”的 exception</p><p>根据各种排除法，大致可以确定原因是</p><p>vivo手机的系统在拍完照，还没有对照片做完处理时</p><p>就发起了回调，导致请求里的数据与实际传输的数据长度不一致</p><p>目前只能暂时获取机型特殊处理，如图：</p><p><img src="https://ws1.sinaimg.cn/large/006tNc79gy1ftbhx66a0vj311a064t8y.jpg" alt=""></p><p>大概的意思就是，检测到特殊型号就延迟十秒去做上传处理</p><p>至于为什么是十秒，是因为没办法把握到系统底层对照片处理的时长</p><p>在这里记录一下这个坑，留给以后解决吧</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;做拍照上传图片到服务器的的操作&lt;/p&gt;
-&lt;p&gt;在做到vivo Y67这个机型时&lt;/p&gt;
-&lt;p&gt;遇到了一个特别奇葩的问题&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="android" scheme="http://creeperdch.xyz/categories/android/"/>
-    
-    
-      <category term="android" scheme="http://creeperdch.xyz/tags/android/"/>
     
   </entry>
   
