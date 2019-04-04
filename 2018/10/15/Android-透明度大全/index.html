@@ -1,0 +1,1457 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="ja">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.4.2" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/glasses.png?v=6.4.2">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=6.4.2">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=6.4.2">
+
+
+  <link rel="mask-icon" href="/images/glasses.png?v=6.4.2" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '6.4.2',
+    sidebar: {"position":"left","width":300,"display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="透明度的计算">
+<meta name="keywords" content="Android">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android 透明度大全">
+<meta property="og:url" content="http://lovelychen.app/2018/10/15/Android-透明度大全/index.html">
+<meta property="og:site_name" content="CREEPERDCH">
+<meta property="og:description" content="透明度的计算">
+<meta property="og:locale" content="ja">
+<meta property="og:updated_time" content="2018-10-22T06:42:29.213Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Android 透明度大全">
+<meta name="twitter:description" content="透明度的计算">
+
+
+
+
+
+
+  <link rel="canonical" href="http://lovelychen.app/2018/10/15/Android-透明度大全/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Android 透明度大全 | CREEPERDCH</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="ja">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">CREEPERDCH</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="ナビゲーションバーの切り替え">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />ホーム</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />カテゴリ</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />アーカイブ</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />について</a>
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://lovelychen.app/2018/10/15/Android-透明度大全/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CREEPERDCH">
+      <meta itemprop="description" content="苟利国家生死以">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CREEPERDCH">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Android 透明度大全
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">投稿日</span>
+              
+
+              
+                
+              
+
+              <time title="建てられる：2018-10-15 11:14:44" itemprop="dateCreated datePublished" datetime="2018-10-15T11:14:44+08:00">2018-10-15</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">に編集されました</span>
+                
+                <time title="修正する：2018-10-22 14:42:29" itemprop="dateModified" datetime="2018-10-22T14:42:29+08:00">2018-10-22</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類された</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Android/" itemprop="url" rel="index"><span itemprop="name">Android</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/10/15/Android-透明度大全/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">コメント：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/10/15/Android-透明度大全/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon"
+            >
+            <i class="fa fa-eye"></i>
+             閲覧数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="透明度的计算"><a href="#透明度的计算" class="headerlink" title="透明度的计算"></a><strong>透明度的计算</strong></h3><a id="more"></a>
+<ul>
+<li>透明度分为256个等级，即 <strong>0 - 255</strong>，<strong>0</strong>就是透明，<strong>255</strong>就是不透明</li>
+<li>透明度 <strong>（透明）0 –&gt; 255（不透明）</strong> 对应着16进制 <strong>（透明）00 –&gt; FF（不透明）</strong></li>
+</ul>
+<p>表格里的透明度值的计算方式是：（A：透明度； H：16进制）</p>
+<p><strong>255*(100% - A%)</strong> 通过计算器转为16进制 <strong>H</strong></p>
+<p>因为计算结果取整数，所以可能会有一个进制位的误差，比如50%的透明度值，上面“1.透明度的计算”中的计算是127，16进制为7F，这里计算是127.5，四舍五入为128，16进制为80。所以，看到这里不用惊慌，7F跟80肉眼看起来是差不多的，不用去计较</p>
+<p><strong>00是完全透明(百分百透明)，FF就是完全不透明</strong></p>
+<h3 id="透明度表格-区分于不透明度"><a href="#透明度表格-区分于不透明度" class="headerlink" title="透明度表格(区分于不透明度)"></a><strong>透明度表格(区分于不透明度)</strong></h3><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>透明度(%)</strong></th>
+<th style="text-align:right"><strong>16进制表示</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">100</td>
+<td style="text-align:right">00</td>
+</tr>
+<tr>
+<td style="text-align:left">99</td>
+<td style="text-align:right">03</td>
+</tr>
+<tr>
+<td style="text-align:left">98</td>
+<td style="text-align:right">05</td>
+</tr>
+<tr>
+<td style="text-align:left">97</td>
+<td style="text-align:right">07</td>
+</tr>
+<tr>
+<td style="text-align:left">96</td>
+<td style="text-align:right">0A</td>
+</tr>
+<tr>
+<td style="text-align:left">95</td>
+<td style="text-align:right">0D</td>
+</tr>
+<tr>
+<td style="text-align:left">94</td>
+<td style="text-align:right">0F</td>
+</tr>
+<tr>
+<td style="text-align:left">93</td>
+<td style="text-align:right">12</td>
+</tr>
+<tr>
+<td style="text-align:left">92</td>
+<td style="text-align:right">14</td>
+</tr>
+<tr>
+<td style="text-align:left">91</td>
+<td style="text-align:right">17</td>
+</tr>
+<tr>
+<td style="text-align:left">90</td>
+<td style="text-align:right">1A</td>
+</tr>
+<tr>
+<td style="text-align:left">89</td>
+<td style="text-align:right">1C</td>
+</tr>
+<tr>
+<td style="text-align:left">88</td>
+<td style="text-align:right">1E</td>
+</tr>
+<tr>
+<td style="text-align:left">87</td>
+<td style="text-align:right">21</td>
+</tr>
+<tr>
+<td style="text-align:left">86</td>
+<td style="text-align:right">24</td>
+</tr>
+<tr>
+<td style="text-align:left">85</td>
+<td style="text-align:right">26</td>
+</tr>
+<tr>
+<td style="text-align:left">84</td>
+<td style="text-align:right">29</td>
+</tr>
+<tr>
+<td style="text-align:left">83</td>
+<td style="text-align:right">2B</td>
+</tr>
+<tr>
+<td style="text-align:left">82</td>
+<td style="text-align:right">2E</td>
+</tr>
+<tr>
+<td style="text-align:left">81</td>
+<td style="text-align:right">30</td>
+</tr>
+<tr>
+<td style="text-align:left">80</td>
+<td style="text-align:right">33</td>
+</tr>
+<tr>
+<td style="text-align:left">79</td>
+<td style="text-align:right">36</td>
+</tr>
+<tr>
+<td style="text-align:left">78</td>
+<td style="text-align:right">38</td>
+</tr>
+<tr>
+<td style="text-align:left">77</td>
+<td style="text-align:right">3B</td>
+</tr>
+<tr>
+<td style="text-align:left">76</td>
+<td style="text-align:right">3D</td>
+</tr>
+<tr>
+<td style="text-align:left">75</td>
+<td style="text-align:right">40</td>
+</tr>
+<tr>
+<td style="text-align:left">74</td>
+<td style="text-align:right">42</td>
+</tr>
+<tr>
+<td style="text-align:left">73</td>
+<td style="text-align:right">45</td>
+</tr>
+<tr>
+<td style="text-align:left">72</td>
+<td style="text-align:right">47</td>
+</tr>
+<tr>
+<td style="text-align:left">71</td>
+<td style="text-align:right">4A</td>
+</tr>
+<tr>
+<td style="text-align:left">70</td>
+<td style="text-align:right">4D</td>
+</tr>
+<tr>
+<td style="text-align:left">69</td>
+<td style="text-align:right">4F</td>
+</tr>
+<tr>
+<td style="text-align:left">68</td>
+<td style="text-align:right">52</td>
+</tr>
+<tr>
+<td style="text-align:left">67</td>
+<td style="text-align:right">54</td>
+</tr>
+<tr>
+<td style="text-align:left">66</td>
+<td style="text-align:right">57</td>
+</tr>
+<tr>
+<td style="text-align:left">65</td>
+<td style="text-align:right">59</td>
+</tr>
+<tr>
+<td style="text-align:left">64</td>
+<td style="text-align:right">5C</td>
+</tr>
+<tr>
+<td style="text-align:left">63</td>
+<td style="text-align:right">5E</td>
+</tr>
+<tr>
+<td style="text-align:left">62</td>
+<td style="text-align:right">61</td>
+</tr>
+<tr>
+<td style="text-align:left">61</td>
+<td style="text-align:right">63</td>
+</tr>
+<tr>
+<td style="text-align:left">60</td>
+<td style="text-align:right">66</td>
+</tr>
+<tr>
+<td style="text-align:left">59</td>
+<td style="text-align:right">69</td>
+</tr>
+<tr>
+<td style="text-align:left">58</td>
+<td style="text-align:right">6B</td>
+</tr>
+<tr>
+<td style="text-align:left">57</td>
+<td style="text-align:right">6E</td>
+</tr>
+<tr>
+<td style="text-align:left">56</td>
+<td style="text-align:right">70</td>
+</tr>
+<tr>
+<td style="text-align:left">55</td>
+<td style="text-align:right">73</td>
+</tr>
+<tr>
+<td style="text-align:left">54</td>
+<td style="text-align:right">75</td>
+</tr>
+<tr>
+<td style="text-align:left">53</td>
+<td style="text-align:right">78</td>
+</tr>
+<tr>
+<td style="text-align:left">52</td>
+<td style="text-align:right">7A</td>
+</tr>
+<tr>
+<td style="text-align:left">51</td>
+<td style="text-align:right">7D</td>
+</tr>
+<tr>
+<td style="text-align:left">50</td>
+<td style="text-align:right">80</td>
+</tr>
+<tr>
+<td style="text-align:left">49</td>
+<td style="text-align:right">82</td>
+</tr>
+<tr>
+<td style="text-align:left">48</td>
+<td style="text-align:right">85</td>
+</tr>
+<tr>
+<td style="text-align:left">47</td>
+<td style="text-align:right">87</td>
+</tr>
+<tr>
+<td style="text-align:left">46</td>
+<td style="text-align:right">8A</td>
+</tr>
+<tr>
+<td style="text-align:left">45</td>
+<td style="text-align:right">8C</td>
+</tr>
+<tr>
+<td style="text-align:left">44</td>
+<td style="text-align:right">8F</td>
+</tr>
+<tr>
+<td style="text-align:left">43</td>
+<td style="text-align:right">91</td>
+</tr>
+<tr>
+<td style="text-align:left">42</td>
+<td style="text-align:right">94</td>
+</tr>
+<tr>
+<td style="text-align:left">41</td>
+<td style="text-align:right">96</td>
+</tr>
+<tr>
+<td style="text-align:left">40</td>
+<td style="text-align:right">99</td>
+</tr>
+<tr>
+<td style="text-align:left">39</td>
+<td style="text-align:right">9C</td>
+</tr>
+<tr>
+<td style="text-align:left">38</td>
+<td style="text-align:right">9E</td>
+</tr>
+<tr>
+<td style="text-align:left">37</td>
+<td style="text-align:right">A1</td>
+</tr>
+<tr>
+<td style="text-align:left">36</td>
+<td style="text-align:right">A3</td>
+</tr>
+<tr>
+<td style="text-align:left">35</td>
+<td style="text-align:right">A6</td>
+</tr>
+<tr>
+<td style="text-align:left">34</td>
+<td style="text-align:right">A8</td>
+</tr>
+<tr>
+<td style="text-align:left">33</td>
+<td style="text-align:right">AB</td>
+</tr>
+<tr>
+<td style="text-align:left">32</td>
+<td style="text-align:right">AD</td>
+</tr>
+<tr>
+<td style="text-align:left">31</td>
+<td style="text-align:right">B0</td>
+</tr>
+<tr>
+<td style="text-align:left">30</td>
+<td style="text-align:right">B3</td>
+</tr>
+<tr>
+<td style="text-align:left">29</td>
+<td style="text-align:right">B5</td>
+</tr>
+<tr>
+<td style="text-align:left">28</td>
+<td style="text-align:right">B8</td>
+</tr>
+<tr>
+<td style="text-align:left">27</td>
+<td style="text-align:right">BA</td>
+</tr>
+<tr>
+<td style="text-align:left">26</td>
+<td style="text-align:right">BD</td>
+</tr>
+<tr>
+<td style="text-align:left">25</td>
+<td style="text-align:right">BF</td>
+</tr>
+<tr>
+<td style="text-align:left">24</td>
+<td style="text-align:right">C2</td>
+</tr>
+<tr>
+<td style="text-align:left">23</td>
+<td style="text-align:right">C4</td>
+</tr>
+<tr>
+<td style="text-align:left">22</td>
+<td style="text-align:right">C7</td>
+</tr>
+<tr>
+<td style="text-align:left">21</td>
+<td style="text-align:right">C9</td>
+</tr>
+<tr>
+<td style="text-align:left">20</td>
+<td style="text-align:right">CC</td>
+</tr>
+<tr>
+<td style="text-align:left">19</td>
+<td style="text-align:right">CF</td>
+</tr>
+<tr>
+<td style="text-align:left">18</td>
+<td style="text-align:right">D1</td>
+</tr>
+<tr>
+<td style="text-align:left">17</td>
+<td style="text-align:right">D4</td>
+</tr>
+<tr>
+<td style="text-align:left">16</td>
+<td style="text-align:right">D6</td>
+</tr>
+<tr>
+<td style="text-align:left">15</td>
+<td style="text-align:right">D9</td>
+</tr>
+<tr>
+<td style="text-align:left">14</td>
+<td style="text-align:right">DB</td>
+</tr>
+<tr>
+<td style="text-align:left">13</td>
+<td style="text-align:right">DE</td>
+</tr>
+<tr>
+<td style="text-align:left">12</td>
+<td style="text-align:right">E0</td>
+</tr>
+<tr>
+<td style="text-align:left">11</td>
+<td style="text-align:right">E3</td>
+</tr>
+<tr>
+<td style="text-align:left">10</td>
+<td style="text-align:right">E6</td>
+</tr>
+<tr>
+<td style="text-align:left">9</td>
+<td style="text-align:right">E8</td>
+</tr>
+<tr>
+<td style="text-align:left">8</td>
+<td style="text-align:right">EB</td>
+</tr>
+<tr>
+<td style="text-align:left">7</td>
+<td style="text-align:right">ED</td>
+</tr>
+<tr>
+<td style="text-align:left">6</td>
+<td style="text-align:right">F0</td>
+</tr>
+<tr>
+<td style="text-align:left">5</td>
+<td style="text-align:right">F2</td>
+</tr>
+<tr>
+<td style="text-align:left">4</td>
+<td style="text-align:right">F5</td>
+</tr>
+<tr>
+<td style="text-align:left">3</td>
+<td style="text-align:right">F7</td>
+</tr>
+<tr>
+<td style="text-align:left">2</td>
+<td style="text-align:right">FA</td>
+</tr>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:right">FC</td>
+</tr>
+<tr>
+<td style="text-align:left">0</td>
+<td style="text-align:right">FF</td>
+</tr>
+</tbody>
+</table>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Android/" rel="tag"><i class="fa fa-tag"></i> Android</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/10/10/紫瑭瑭的字帖-十月/" rel="next" title="紫瑭瑭的字帖(十月)">
+                <i class="fa fa-chevron-left"></i> 紫瑭瑭的字帖(十月)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/10/22/《中华人民共和国刑法》/" rel="prev" title="《中华人民共和国刑法》">
+                《中华人民共和国刑法》 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            見出し
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            概要
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="CREEPERDCH" />
+            
+              <p class="site-author-name" itemprop="name">CREEPERDCH</p>
+              <p class="site-description motion-element" itemprop="description">苟利国家生死以</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">38</span>
+                    <span class="site-state-item-name">ポスト</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-name">カテゴリ</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-name">タグ</span>
+                  
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/CREEPERDCH" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:wwwwyn4240@gmail.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://twitter.com/wwwwyn4240" target="_blank" title="Twitter"><i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://www.facebook.com/wwwwyn" target="_blank" title="FB Page"><i class="fa fa-fw fa-facebook"></i>FB Page</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://instagram.com/creeperdch" target="_blank" title="Instagram"><i class="fa fa-fw fa-instagram"></i>Instagram</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://v3.bootcss.com/getting-started/#download/" title="BootstrapCDN加速" target="_blank">BootstrapCDN加速</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://code.jquery.com/" title="jQueryCDN加速" target="_blank">jQueryCDN加速</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.processon.com/" title="ProcessOn在线制图工具" target="_blank">ProcessOn在线制图工具</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.clipconverter.cc/" title="Youtube Downloader" target="_blank">Youtube Downloader</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://learn.lingvist.com/" title="在线外语词汇积累" target="_blank">在线外语词汇积累</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.cloudflare.com/" title="Cloudflare" target="_blank">Cloudflare</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#透明度的计算"><span class="nav-number">1.</span> <span class="nav-text">透明度的计算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#透明度表格-区分于不透明度"><span class="nav-number">2.</span> <span class="nav-text">透明度表格(区分于不透明度)</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2015 – <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-User"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">岂因祸福避趋之</span>
+<span>
+  <img src="https://api.gushi.ci/shuqing/aiqing.svg?font-size=15&spacing=1">
+  <!-- <img alt="今日诗词" src="https://v2.jinrishici.com/one.svg" style="max-width:100%; display: block; margin: 0 auto;"> -->
+  <!-- <img alt="今日诗词" src="https://v2.jinrishici.com/one.svg"> -->
+</span>
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv" title="合計閲覧者数">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="site-pv" title="閲覧合計数">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'H78Pg6j0lgmXRgYJayNMsIe3-gzGzoHsz',
+        appKey: 'YwHuAUtNNefaFp7HySR7VvuW',
+        placeholder: 'ヾﾉ≧∀≦)o来快活啊!',
+        avatar:'https://gravatar.loli.net/avatar/',
+        meta:guest,
+        pageSize:'10' || 10,
+        visitor: false
+    });
+  </script>
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function (i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap')
+      $(e).after($wrap)
+      $wrap.append($('<button>').addClass('copy-btn').append('コピー').on('click', function (e) {
+        var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+          return $(e).text()
+        }).toArray().join('\n')
+        var ta = document.createElement('textarea')
+        document.body.appendChild(ta)
+        ta.style.position = 'absolute'
+        ta.style.top = '0px'
+        ta.style.left = '0px'
+        ta.value = code
+        ta.select()
+        ta.focus()
+        var result = document.execCommand('copy')
+        document.body.removeChild(ta)
+        
+          if(result)$(this).text('コピーしました')
+          else $(this).text('コピーに失敗しました')
+        
+        $(this).blur()
+      })).on('mouseleave', function (e) {
+        var $b = $(this).find('.copy-btn')
+        setTimeout(function () {
+          $b.text('コピー')
+        }, 300)
+      }).append(e)
+    })
+  </script>
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/Epsilon2.1.model.json"},"display":{"position":"left","width":100,"height":200},"mobile":{"show":false},"log":false});</script></body>
+</html>
