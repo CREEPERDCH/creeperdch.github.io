@@ -120,13 +120,13 @@
 <meta property="og:site_name" content="CREEPERDCH">
 <meta property="og:description" content="原文Kotlin协程高级玩法之防按钮多次点击 作者zzyandroid 引言在android开发过程中，经常遇到按钮多次点击后，会多次触发业务流程，导致不必要的浪费，一般在处理过程中会添加一个boolean状态来控制，实现起来过于繁琐，而在kotlin的世界里，这就简单了。 实现 给View扩展一个函数叫onClickStart，意思是只处理第一次开始事件  细节: 初始化一个协程实例actor">
 <meta property="og:locale" content="ja">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79gy1fte5rlxaudj30om07rmxg.jpg">
-<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tNc79gy1fte5t0p9qaj30kz087t95.jpg">
-<meta property="og:updated_time" content="2019-04-29T02:44:10.215Z">
+<meta property="og:image" content="https://wwwwyn4240.oss-cn-shenzhen.aliyuncs.com/creeperdch/t7unf.jpg">
+<meta property="og:image" content="https://wwwwyn4240.oss-cn-shenzhen.aliyuncs.com/creeperdch/49kwr.jpg">
+<meta property="og:updated_time" content="2019-05-05T07:36:53.020Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Kotlin协程高级玩法之防按钮多次点击">
 <meta name="twitter:description" content="原文Kotlin协程高级玩法之防按钮多次点击 作者zzyandroid 引言在android开发过程中，经常遇到按钮多次点击后，会多次触发业务流程，导致不必要的浪费，一般在处理过程中会添加一个boolean状态来控制，实现起来过于繁琐，而在kotlin的世界里，这就简单了。 实现 给View扩展一个函数叫onClickStart，意思是只处理第一次开始事件  细节: 初始化一个协程实例actor">
-<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006tNc79gy1fte5rlxaudj30om07rmxg.jpg">
+<meta name="twitter:image" content="https://wwwwyn4240.oss-cn-shenzhen.aliyuncs.com/creeperdch/t7unf.jpg">
 
 
 
@@ -366,7 +366,7 @@
                 
                   <span class="post-meta-item-text">に編集されました</span>
                 
-                <time title="修正する：2019-04-29 10:44:10" itemprop="dateModified" datetime="2019-04-29T10:44:10+08:00">2019-04-29</time>
+                <time title="修正する：2019-05-05 15:36:53" itemprop="dateModified" datetime="2019-05-05T15:36:53+08:00">2019-05-05</time>
               
             
           </span>
@@ -444,10 +444,9 @@
 <p>细节: 初始化一个协程实例actor，它来负责处理事件action，并在用户点击的时候将action处理后的结果传递给offer函数。</p>
 </blockquote>
 <p><strong>函数</strong></p>
-<p><img src="https://ws1.sinaimg.cn/large/006tNc79gy1fte5rlxaudj30om07rmxg.jpg" alt=""></p>
+<p><img src="https://wwwwyn4240.oss-cn-shenzhen.aliyuncs.com/creeperdch/t7unf.jpg" alt=""></p>
 <h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><pre><code>在onClickStart函数中使用delay 3秒钟，就可以完美实现三秒内不能被重复处理。
-</code></pre><p><strong>代码</strong></p>
-<p><img src="https://ws2.sinaimg.cn/large/006tNc79gy1fte5t0p9qaj30kz087t95.jpg" alt=""></p>
+</code></pre><p><strong>代码</strong><br>​<br><img src="https://wwwwyn4240.oss-cn-shenzhen.aliyuncs.com/creeperdch/49kwr.jpg" alt=""></p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><pre><code>优雅的方式实现了一个常用的功能，这是协程的功劳。加油 kotlin！
 </code></pre>
       

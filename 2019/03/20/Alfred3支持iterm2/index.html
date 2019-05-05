@@ -120,12 +120,12 @@
 <meta property="og:site_name" content="CREEPERDCH">
 <meta property="og:description" content="让 Alfred3 支持 iterm2">
 <meta property="og:locale" content="ja">
-<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcgy1g191o82y0wj317t0u0gu7.jpg">
-<meta property="og:updated_time" content="2019-04-29T02:44:10.221Z">
+<meta property="og:image" content="https://wwwwyn4240.oss-cn-shenzhen.aliyuncs.com/creeperdch/ubbc2.jpg">
+<meta property="og:updated_time" content="2019-05-05T07:52:25.964Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Alfred3支持iterm2">
 <meta name="twitter:description" content="让 Alfred3 支持 iterm2">
-<meta name="twitter:image" content="https://ws4.sinaimg.cn/large/006tKfTcgy1g191o82y0wj317t0u0gu7.jpg">
+<meta name="twitter:image" content="https://wwwwyn4240.oss-cn-shenzhen.aliyuncs.com/creeperdch/ubbc2.jpg">
 
 
 
@@ -365,7 +365,7 @@
                 
                   <span class="post-meta-item-text">に編集されました</span>
                 
-                <time title="修正する：2019-04-29 10:44:10" itemprop="dateModified" datetime="2019-04-29T10:44:10+08:00">2019-04-29</time>
+                <time title="修正する：2019-05-05 15:52:25" itemprop="dateModified" datetime="2019-05-05T15:52:25+08:00">2019-05-05</time>
               
             
           </span>
@@ -436,7 +436,7 @@
       
         <p>让 <strong>Alfred3</strong> 支持 <strong>iterm2</strong></p>
 <a id="more"></a>
-<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g191o82y0wj317t0u0gu7.jpg" alt=""></p>
+<p><img src="https://wwwwyn4240.oss-cn-shenzhen.aliyuncs.com/creeperdch/ubbc2.jpg" alt=""></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">on alfred_script(q)</span><br><span class="line">    if application &quot;iTerm2&quot; is running or application &quot;iTerm&quot; is running then</span><br><span class="line">        run script &quot;</span><br><span class="line">            on run &#123;q&#125;</span><br><span class="line">                tell application \&quot;iTerm\&quot;</span><br><span class="line">                    activate</span><br><span class="line">                    try</span><br><span class="line">                        select first window</span><br><span class="line">                        set onlywindow to true</span><br><span class="line">                    on error</span><br><span class="line">                        create window with default profile</span><br><span class="line">                        select first window</span><br><span class="line">                        set onlywindow to true</span><br><span class="line">                    end try</span><br><span class="line">                    tell the first window</span><br><span class="line">                        if onlywindow is false then</span><br><span class="line">                            create tab with default profile</span><br><span class="line">                        end if</span><br><span class="line">                        tell current session to write text q</span><br><span class="line">                    end tell</span><br><span class="line">                end tell</span><br><span class="line">            end run</span><br><span class="line">        &quot; with parameters &#123;q&#125;</span><br><span class="line">    else</span><br><span class="line">        run script &quot;</span><br><span class="line">            on run &#123;q&#125;</span><br><span class="line">                tell application \&quot;iTerm\&quot;</span><br><span class="line">                    activate</span><br><span class="line">                    try</span><br><span class="line">                        select first window</span><br><span class="line">                    on error</span><br><span class="line">                        create window with default profile</span><br><span class="line">                        select first window</span><br><span class="line">                    end try</span><br><span class="line">                    tell the first window</span><br><span class="line">                        tell current session to write text q</span><br><span class="line">                    end tell</span><br><span class="line">                end tell</span><br><span class="line">            end run</span><br><span class="line">        &quot; with parameters &#123;q&#125;</span><br><span class="line">    end if</span><br><span class="line">end alfred_script</span><br></pre></td></tr></table></figure>
 
       
