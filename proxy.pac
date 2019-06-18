@@ -6,7 +6,7 @@ function FindProxyForURL(url, host) {
             ||dnsDomainIs(host, 'beta.this.shop')
             ||dnsDomainIs(host, 'thisshop.com')) {
                //这里填你自己的局域网ip，端口号是你在Charles里设置的 默认8888
-        return "PROXY 192.168.51.39:8899; DIRECT;";
+        return "PROXY 192.168.52.182:8899; DIRECT;";
     } else {
         return "DIRECT";
     }
