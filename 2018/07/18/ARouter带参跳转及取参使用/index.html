@@ -15,10 +15,10 @@
 
 
 <html class="theme-next mist use-motion" lang="ja">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 
 
@@ -32,8 +32,8 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -52,7 +52,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -60,9 +60,9 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=6.4.2" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.4.2" rel="stylesheet" type="text/css">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/glasses.png?v=6.4.2">
@@ -133,7 +133,7 @@
 
 
 
-  <link rel="canonical" href="http://lovelychen.app/2018/07/18/ARouter带参跳转及取参使用/"/>
+  <link rel="canonical" href="http://lovelychen.app/2018/07/18/ARouter带参跳转及取参使用/">
 
 
 
@@ -229,7 +229,7 @@
           
           <li class="menu-item menu-item-home">
     <a href="/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />ホーム</a>
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br>ホーム</a>
   </li>
         
         
@@ -237,7 +237,7 @@
           
           <li class="menu-item menu-item-categories">
     <a href="/categories/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />カテゴリ</a>
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br>カテゴリ</a>
   </li>
         
         
@@ -245,7 +245,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />アーカイブ</a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>アーカイブ</a>
   </li>
         
         
@@ -253,7 +253,7 @@
           
           <li class="menu-item menu-item-about">
     <a href="/about/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />について</a>
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br>について</a>
   </li>
 
       
@@ -372,7 +372,7 @@
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -410,11 +410,10 @@
 
           
             <span class="post-meta-divider">|</span>
-            <span class="post-meta-item-icon"
-            >
+            <span class="post-meta-item-icon">
             <i class="fa fa-eye"></i>
              閲覧数： 
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
           
 
@@ -440,9 +439,9 @@
 <p>A framework for assisting in the renovation of Android app componentization.</p>
 </blockquote>
 <p>项目地址: <a href="https://github.com/alibaba/ARouter" target="_blank" rel="noopener">https://github.com/alibaba/ARouter</a></p>
-<h3 id="带参跳转"><a href="#带参跳转" class="headerlink" title="带参跳转"></a><strong>带参跳转</strong></h3><p><img src="https://wwwwyn4240.oss-cn-shenzhen.aliyuncs.com/creeperdch/74dox.jpg" alt=""></p>
+<h3 id="带参跳转"><a href="#带参跳转" class="headerlink" title="带参跳转"></a><strong>带参跳转</strong></h3><p><img src="https://wwwwyn4240.oss-cn-shenzhen.aliyuncs.com/creeperdch/74dox.jpg" alt></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//头像（登录）--&gt; 跳转我的资料</span></span><br><span class="line">      findView&lt;CircleImageView&gt;(civ_login_headPic)!!.setOnClickListener &#123;</span><br><span class="line">          arouter.build(ARouterConfig.ACTIVITY_URL_SETTINGS)</span><br><span class="line">                  .withString(CommonConfig.USERINFO_TAG, <span class="string">"userInfo"</span>)</span><br><span class="line">                  .navigation()</span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure>
-<h3 id="注解取参"><a href="#注解取参" class="headerlink" title="注解取参"></a><strong>注解取参</strong></h3><p><img src="https://wwwwyn4240.oss-cn-shenzhen.aliyuncs.com/creeperdch/74dox.jpg" alt=""></p>
+<h3 id="注解取参"><a href="#注解取参" class="headerlink" title="注解取参"></a><strong>注解取参</strong></h3><p><img src="https://wwwwyn4240.oss-cn-shenzhen.aliyuncs.com/creeperdch/74dox.jpg" alt></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@JvmField</span></span><br><span class="line"><span class="meta">@Autowired</span>(name = CommonConfig.USERINFO_TAG)</span><br><span class="line">var userTag: String? = <span class="keyword">null</span></span><br><span class="line"></span><br><span class="line"><span class="function">override fun <span class="title">getContentViewResId</span><span class="params">()</span>: Int </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> R.layout.activity_settings</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">override fun <span class="title">onCreate</span><span class="params">(savedInstanceState: Bundle?)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">super</span>.onCreate(savedInstanceState)</span><br><span class="line">    ARouter.getInstance().inject(<span class="keyword">this</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">override fun <span class="title">initView</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    changeStatusBarForBlack()</span><br><span class="line">    when (userTag) &#123;</span><br><span class="line">        <span class="keyword">null</span> -&gt; initTitleBar(R.string.setting)<span class="comment">//从设置进来</span></span><br><span class="line">        <span class="keyword">else</span> -&gt; &#123;</span><br><span class="line">            <span class="comment">//从头像进来,隐藏APP_INFO设置项</span></span><br><span class="line">            initTitleBar(R.string.userinfo)</span><br><span class="line">            include_app_info.visibility = View.GONE</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    when (isLogin) &#123;</span><br><span class="line">        <span class="keyword">false</span> -&gt; &#123;</span><br><span class="line">            include_user_info.visibility = View.GONE</span><br><span class="line">            tv_log_out.visibility = View.GONE</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">true</span> -&gt; &#123;</span><br><span class="line">            <span class="comment">//头像的加载</span></span><br><span class="line">            <span class="keyword">if</span> (!TextUtils.isEmpty(headPortrait)) &#123;</span><br><span class="line">                ImageUtil.loadCircleImageWithLoading(<span class="keyword">this</span>,</span><br><span class="line">                        ImageUtil.getPath(<span class="keyword">this</span>, headPortrait),</span><br><span class="line">                        civ_setting_head_portrait,</span><br><span class="line">                        R.drawable.ic_no_person_image,</span><br><span class="line">                        R.drawable.ic_no_person_image)</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">               civ_setting_head_portrait</span><br><span class="line">                   .setImageResource(R.drawable.ic_no_person_image)</span><br><span class="line">            &#125;</span><br><span class="line">            include_user_info.visibility = View.VISIBLE</span><br><span class="line">            tv_log_out.visibility = View.VISIBLE</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><strong>在Kotlin中使用ARouter路由,使用注解取参数时,要注意声明的字段不能使用 <em>Private</em> ,否则会导致GradlePlugin 的异常,因此这里需要加多一个 <em>@JvmField</em> 的注解.</strong></p>
 
@@ -552,9 +551,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image"
-                src="/images/avatar.jpg"
-                alt="CREEPERDCH" />
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="CREEPERDCH">
             
               <p class="site-author-name" itemprop="name">CREEPERDCH</p>
               <p class="site-description motion-element" itemprop="description">苟利国家生死以</p>
@@ -736,7 +733,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ARouter"><span class="nav-number">1.</span> <span class="nav-text">ARouter</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#带参跳转"><span class="nav-number">1.0.1.</span> <span class="nav-text">带参跳转</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注解取参"><span class="nav-number">1.0.2.</span> <span class="nav-text">注解取参</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ARouter"><span class="nav-number">1.</span> <span class="nav-text">ARouter</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#带参跳转"><span class="nav-number">1.0.1.</span> <span class="nav-text">带参跳转</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注解取参"><span class="nav-number">1.0.2.</span> <span class="nav-text">注解取参</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1043,5 +1040,5 @@
   </script>
 
 
-<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/Epsilon2.1.model.json"},"display":{"position":"left","width":100,"height":200},"mobile":{"show":false},"log":false});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/Epsilon2.1.model.json"},"display":{"position":"left","width":100,"height":200},"mobile":{"show":false},"log":false});</script></body>
 </html>
